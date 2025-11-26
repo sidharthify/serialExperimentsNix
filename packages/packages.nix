@@ -45,7 +45,7 @@ pkgs: with pkgs; [
     zenity
     quota
     ani-cli
-    drawpile
+    # drawpile
     mtr-gui
     android-tools
     apktool
@@ -152,4 +152,5 @@ pkgs: with pkgs; [
   nodejs
   protontricks
   pkgsi686Linux.freetype
+  sox
 ]

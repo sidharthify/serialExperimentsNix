@@ -152,4 +152,5 @@ pkgs: with pkgs; [
   pkgsi686Linux.freetype
   sox
   android-studio
+  temurin-bin
 ]

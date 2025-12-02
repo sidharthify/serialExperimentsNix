@@ -142,7 +142,6 @@ pkgs: with pkgs; [
   font-awesome
   alacritty
   htop
-  # dont want for now - android-studio-full
   man-pages
   # winboat
   gdb
@@ -152,4 +151,5 @@ pkgs: with pkgs; [
   protontricks
   pkgsi686Linux.freetype
   sox
+  android-studio
 ]

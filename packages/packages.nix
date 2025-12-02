@@ -153,4 +153,5 @@ pkgs: with pkgs; [
   sox
   android-studio
   temurin-bin
+  gradle
 ]

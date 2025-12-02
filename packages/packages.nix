@@ -142,7 +142,6 @@ pkgs: with pkgs; [
   font-awesome
   alacritty
   htop
-  isoimagewriter
   # dont want for now - android-studio-full
   man-pages
   # winboat

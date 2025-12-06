@@ -12,7 +12,7 @@
   networking.resolvconf.enable = false;
   networking.nameservers = [ "192.168.1.1" ];
   networking.interfaces."wlp3s0".mtu = 1500;
-  networking.firewall.allowedTCPPorts = [ 25565 24800 ];
+  networking.firewall.allowedTCPPorts = [ 25565 24800 59100 59200];
   networking.enableIPv6 = false;
 
   boot.kernel.sysctl = {

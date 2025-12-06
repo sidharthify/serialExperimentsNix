@@ -22,6 +22,7 @@
     "org.kde.kclock"
     "org.vinegarhq.Sober"
     "io.github.ronniedroid.concessio"
+    "net.audiorelay.AudioRelay"
   ];
 
 }

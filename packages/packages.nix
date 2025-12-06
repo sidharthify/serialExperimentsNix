@@ -154,4 +154,5 @@ pkgs: with pkgs; [
   android-studio
   temurin-bin
   gradle
+  soundwireserver
 ]

@@ -155,4 +155,5 @@ pkgs: with pkgs; [
   temurin-bin
   gradle
   soundwireserver
+  p7zip
 ]

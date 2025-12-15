@@ -303,6 +303,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1749857119,
+        "narHash": "sha256-tG5xUn3hFaPpAHYIvr2F88b+ovcIO5k1HqajFy7ZFPM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f4f306bea96741f1588ea4f450b2a2e29f42b98",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1764950072,
         "narHash": "sha256-BmPWzogsG2GsXZtlT+MTcAWeDK5hkbGRZTeZNW42fwA=",
         "owner": "NixOS",
@@ -317,7 +333,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1760524057,
         "narHash": "sha256-EVAqOteLBFmd7pKkb0+FIUyzTF61VKi7YmvP1tw4nEw=",
@@ -333,7 +349,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1764517877,
         "narHash": "sha256-pp3uT4hHijIC8JUK5MEqeAWmParJrgBVzHLNfJDZxg4=",
@@ -349,6 +365,50 @@
         "type": "github"
       }
     },
+    "parsecDeb": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-+sNEGgb2wARM8JDf3Gdzk+N/IFNERlEQJFROGQGP8XE=",
+        "type": "file",
+        "url": "https://builds.parsecgaming.com/package/parsec-linux.deb"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://builds.parsecgaming.com/package/parsec-linux.deb"
+      }
+    },
+    "parsecMeta": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-w4RUg+A+BfYsu2gIpSvYFdPXTGd0lWEp44X4/6jYHQE=",
+        "type": "file",
+        "url": "https://builds.parsecgaming.com/channel/release/appdata/linux/latest"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://builds.parsecgaming.com/channel/release/appdata/linux/latest"
+      }
+    },
+    "parsecgaming": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4",
+        "parsecDeb": "parsecDeb",
+        "parsecMeta": "parsecMeta"
+      },
+      "locked": {
+        "lastModified": 1765065769,
+        "narHash": "sha256-IqoIeDsL+jnI57J8R+Pywu9p9Y7dfTbFPB9/dI9j7g4=",
+        "owner": "DarthPJB",
+        "repo": "parsec-gaming-nix",
+        "rev": "7a0c03161c696cf101e4fd970b8acb1c99e6f639",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DarthPJB",
+        "repo": "parsec-gaming-nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
@@ -356,6 +416,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_3",
+        "parsecgaming": "parsecgaming",
         "spicetify-nix": "spicetify-nix",
         "syd": "syd",
         "zen-browser-source": "zen-browser-source"
@@ -363,7 +424,7 @@
     },
     "spicetify-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_5",
         "systems": "systems_2"
       },
       "locked": {
@@ -382,7 +443,7 @@
     },
     "syd": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1763285547,
@@ -430,7 +491,7 @@
     },
     "zen-browser-source": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_7"
       },
       "locked": {
         "lastModified": 1764648680,

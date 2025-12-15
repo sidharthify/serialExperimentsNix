@@ -13,6 +13,8 @@
     lazyvim-nix.url = "github:jla2000/lazyvim-nix";
     syd.url = "github:sidharthify/syd";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
   };
 
   outputs = { self, nixpkgs, home-manager, spicetify-nix, zen-browser-source, nixcord, lazyvim-nix, syd, nix-flatpak, ... }@inputs:
@@ -62,6 +64,7 @@
           environment.systemPackages = [
             zen-browser-source.packages.${system}.default
             syd.packages.${system}.default
+            inputs.parsecgaming.packages.x86_64-linux.parsecgaming
           ];
         }
       ];

@@ -156,4 +156,5 @@ pkgs: with pkgs; [
   gradle
   soundwireserver
   p7zip
+  parsec-bin
 ]

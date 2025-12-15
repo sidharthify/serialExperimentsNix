@@ -17,25 +17,39 @@
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix, zen-browser-source, nixcord, lazyvim-nix, syd, nix-flatpak, ... }@inputs:
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    spicetify-nix,
+    zen-browser-source,
+    nixcord,
+    lazyvim-nix,
+    syd,
+    nix-flatpak,
+    parsecgaming,
+    ...
+  }@inputs:
   let
     system = "x86_64-linux";
-
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
   in {
-
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
 
       specialArgs = { inherit inputs; };
 
       modules = [
+        ({ pkgs, ... }: {
+          nixpkgs.overlays = [
+            (final: prev: {
+              parsecgaming =
+                parsecgaming.packages.${system}.parsecgaming;
+            })
+          ];
+        })
+
         ./nixos/configuration.nix
         nix-flatpak.nixosModules.nix-flatpak
-
         home-manager.nixosModules.home-manager
 
         {
@@ -50,7 +64,7 @@
               ./home/nixcord.nix
             ];
           };
-        
+
           home-manager.sharedModules = [
             inputs.nixcord.homeModules.nixcord
           ];
@@ -60,13 +74,13 @@
           };
         }
 
-        {
+        ({ pkgs, ... }: {
           environment.systemPackages = [
             zen-browser-source.packages.${system}.default
             syd.packages.${system}.default
-            inputs.parsecgaming.packages.x86_64-linux.parsecgaming
+            pkgs.parsecgaming
           ];
-        }
+        })
       ];
     };
   };

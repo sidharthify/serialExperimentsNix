@@ -157,4 +157,5 @@ pkgs: with pkgs; [
   soundwireserver
   p7zip
   parsec-bin
+  sqlite
 ]

@@ -158,4 +158,5 @@ pkgs: with pkgs; [
   p7zip
   parsec-bin
   sqlite
+  dotnetCorePackages.sdk_9_0_1xx-bin
 ]

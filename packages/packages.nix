@@ -159,4 +159,5 @@ pkgs: with pkgs; [
   parsec-bin
   sqlite
   dotnetCorePackages.sdk_9_0_1xx-bin
+  mission-center
 ]

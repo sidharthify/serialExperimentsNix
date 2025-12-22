@@ -29,6 +29,7 @@
         disableCallIdle.enable = true;
         dontRoundMyTimestamps.enable = true;
         experiments.enable = true;
+        expressionCloner.enable = true;
         fakeNitro.enable = true;
         favoriteEmojiFirst.enable = true;
         favoriteGifSearch.enable = true;

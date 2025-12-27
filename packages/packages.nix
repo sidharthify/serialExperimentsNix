@@ -160,4 +160,5 @@ pkgs: with pkgs; [
   sqlite
   dotnetCorePackages.sdk_9_0_1xx-bin
   mission-center
+  udisks
 ]

@@ -162,4 +162,5 @@ pkgs: with pkgs; [
   mission-center
   udisks
   warp-terminal
+  ryubing
 ]

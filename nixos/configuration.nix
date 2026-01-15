@@ -8,6 +8,8 @@
     ./hardware/bluetooth.nix
     ./hardware/intel.nix
     ./hardware/nvidia.nix
+    ./hardware/nvme.nix 
+
     ./system/bootloader.nix
     ./system/desktop.nix
     ./system/fonts.nix

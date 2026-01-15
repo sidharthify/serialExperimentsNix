@@ -13,9 +13,9 @@
           TZ = "Asia/Kolkata";
         };
         volumes = [
-          "/mnt/sda1/sonarr/config:/config"
-          "/mnt/sda1/media:/media"
-          "/mnt/sda1/data/torrents:/downloads"
+          "/mnt/sdb/sonarr/config:/config"
+          "/mnt/sdb/media:/media"
+          "/mnt/sdb/data/torrents:/downloads"
         ];
         extraOptions = [ "--network=host" ];
       };
@@ -29,9 +29,9 @@
           TZ = "Asia/Kolkata";
         };
         volumes = [
-          "/mnt/sda1/radarr/config:/config"
-          "/mnt/sda1/media:/media"
-          "/mnt/sda1/data/torrents:/downloads"
+          "/mnt/sdb/radarr/config:/config"
+          "/mnt/sdb/media:/media"
+          "/mnt/sdb/data/torrents:/downloads"
         ];
         extraOptions = [ "--network=host" ];
       };
@@ -45,7 +45,22 @@
           TZ = "Asia/Kolkata";
         };
         volumes = [
-          "/mnt/sda1/prowlarr/config:/config"
+          "/mnt/sdb/prowlarr/config:/config"
+        ];
+        extraOptions = [ "--network=host" ];
+      };
+
+      # Jellyfin
+      jellyfin = {
+        image = "linuxserver/jellyfin:latest";
+        environment = {
+          PUID = "1000";
+          PGID = "1000";
+          TZ = "Asia/Kolkata";
+        };
+        volumes = [
+          "/mnt/sdb/jellyfin/config:/config"
+          "/mnt/sdb/media:/media"
         ];
         extraOptions = [ "--network=host" ];
       };
@@ -61,29 +76,14 @@
           WEBUI_PORTS = "8080/tcp,8080/udp";
         };
         volumes = [
-          "/mnt/sda1/qbittorrent/config:/config"
-          "/mnt/sda1/data/torrents:/downloads"
+          "/mnt/sdb/qbittorrent/config:/config"
+          "/mnt/sdb/data/torrents:/downloads"
         ];
         ports = [
           "8080:8080"
           "6881:6881"
           "6881:6881/udp"
         ];
-      };
-
-      # Plex
-      plex = {
-        image = "plexinc/pms-docker:latest";
-        environment = {
-          TZ = "Asia/Kolkata";
-          PLEX_CLAIM = "claim-jcxynZtWeZJamYzU8kFy";
-          # ADVERTISE_IP = "http://192.168.1.184:32400/";
-        };
-        volumes = [
-          "/mnt/sda1/plex/config:/config"
-          "/mnt/sda1/media:/media:ro"
-        ];
-        extraOptions = [ "--network=host" ];
       };
     };
   };

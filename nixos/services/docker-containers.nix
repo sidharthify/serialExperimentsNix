@@ -50,6 +50,15 @@
         extraOptions = [ "--network=host" ];
       };
 
+     # FlareSolverr
+      flaresolverr = {
+        image = "ghcr.io/flaresolverr/flaresolverr:latest";
+        environment = {
+          TZ = "Asia/Kolkata";
+        };
+        extraOptions = [ "--network=host" ];
+      };
+
       # Jellyfin
       jellyfin = {
         image = "linuxserver/jellyfin:latest";

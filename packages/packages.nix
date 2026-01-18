@@ -163,4 +163,5 @@ pkgs: with pkgs; [
   udisks
   warp-terminal
   cemu
+  apksigner
 ]

@@ -165,4 +165,5 @@ pkgs: with pkgs; [
   cemu
   apksigner
   vscode
+  jdk17
 ]

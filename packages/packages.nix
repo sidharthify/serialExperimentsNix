@@ -164,4 +164,5 @@ pkgs: with pkgs; [
   warp-terminal
   cemu
   apksigner
+  vscode
 ]

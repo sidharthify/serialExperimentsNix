@@ -166,4 +166,5 @@ pkgs: with pkgs; [
   apksigner
   vscode
   jdk17
+  antigravity
 ]

@@ -161,7 +161,6 @@ pkgs: with pkgs; [
   dotnetCorePackages.sdk_9_0_1xx-bin
   mission-center
   udisks
-  warp-terminal
   cemu
   apksigner
   vscode

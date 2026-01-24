@@ -167,4 +167,5 @@ pkgs: with pkgs; [
   jdk17
   antigravity
   google-chrome
+  distrobox
 ]

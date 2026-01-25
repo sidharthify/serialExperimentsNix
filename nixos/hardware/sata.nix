@@ -6,4 +6,8 @@
     fsType = "ext4"; 
     options = [ "nofail" ]; 
   };
+
+  systemd.tmpfiles.rules = [
+    "d /mnt/sda 0755 sidharthify users -"
+  ];
 }

@@ -25,6 +25,7 @@
     ./system/nix-settings.nix
     ./system/auto-upgrade.nix
     ./system/android-dev.nix
+    ./system/zram.nix
 
     ./services/docker-containers.nix
     ./services/orca.nix

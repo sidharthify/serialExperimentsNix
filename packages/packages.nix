@@ -168,4 +168,5 @@ pkgs: with pkgs; [
   antigravity
   google-chrome
   distrobox
+  rclone
 ]

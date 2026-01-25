@@ -8,7 +8,7 @@
     ./hardware/bluetooth.nix
     ./hardware/intel.nix
     ./hardware/nvidia.nix
-    ./hardware/nvme.nix 
+    ./hardware/sata.nix 
 
     ./system/bootloader.nix
     ./system/desktop.nix

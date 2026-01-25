@@ -24,6 +24,7 @@
     ./system/printing.nix
     ./system/nix-settings.nix
     ./system/auto-upgrade.nix
+    ./system/android-dev.nix
 
     ./services/docker-containers.nix
     ./services/orca.nix

@@ -170,4 +170,5 @@ pkgs: with pkgs; [
   distrobox
   rclone
   glow
+  marktext
 ]

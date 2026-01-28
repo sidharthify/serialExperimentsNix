@@ -169,4 +169,5 @@ pkgs: with pkgs; [
   google-chrome
   distrobox
   rclone
+  glow
 ]

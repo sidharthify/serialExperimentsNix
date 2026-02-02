@@ -143,7 +143,7 @@ pkgs: with pkgs; [
   alacritty
   htop
   man-pages
-  # winboat
+  winboat
   gdb
   qemu
   gdb-dashboard

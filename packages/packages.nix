@@ -171,6 +171,5 @@ pkgs: with pkgs; [
   rclone
   glow
   marktext
-  video-downloader
   media-downloader
 ]

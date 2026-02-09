@@ -82,7 +82,7 @@
           PGID = "1000";
           UMASK = "002";
           TZ = "Asia/Kolkata";
-          WEBUI_PORTS = "8080/tcp,8080/udp";
+          WEBUI_PORTS = "8081/tcp,8081/udp";
         };
         volumes = [
           "/mnt/sdb/qbittorrent/config:/config"

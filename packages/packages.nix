@@ -173,4 +173,5 @@ pkgs: with pkgs; [
   marktext
   media-downloader
   gemini-cli
+  go
 ]

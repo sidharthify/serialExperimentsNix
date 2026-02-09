@@ -172,4 +172,5 @@ pkgs: with pkgs; [
   glow
   marktext
   media-downloader
+  gemini-cli
 ]

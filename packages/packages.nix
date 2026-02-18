@@ -174,4 +174,5 @@ pkgs: with pkgs; [
   media-downloader
   gemini-cli
   go
+  appimage-run
 ]

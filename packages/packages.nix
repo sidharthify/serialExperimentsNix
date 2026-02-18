@@ -175,4 +175,5 @@ pkgs: with pkgs; [
   gemini-cli
   go
   appimage-run
+  wails
 ]

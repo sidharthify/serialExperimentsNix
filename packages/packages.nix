@@ -176,4 +176,5 @@ pkgs: with pkgs; [
   go
   appimage-run
   wails
+  webkitgtk_6_0
 ]

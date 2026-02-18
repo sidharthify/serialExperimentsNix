@@ -174,5 +174,4 @@ pkgs: with pkgs; [
   media-downloader
   gemini-cli
   go
-  logmein-hamachi
 ]

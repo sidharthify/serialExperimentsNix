@@ -23,6 +23,7 @@
     "org.vinegarhq.Sober"
     "io.github.ronniedroid.concessio"
     "net.audiorelay.AudioRelay"
+    "io.mrarm.mcpelauncher"
   ];
 
 }

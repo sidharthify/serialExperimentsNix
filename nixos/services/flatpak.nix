@@ -15,15 +15,12 @@
 
   # installed flatpaks
   services.flatpak.packages = [
-    "dev.bragefuglseth.Keypunch"
     "io.github.brunofin.Cohesion"
-    "io.github.jeffshee.Hidamari"
-    "net.nokyan.Resources"
     "org.kde.kclock"
     "org.vinegarhq.Sober"
     "io.github.ronniedroid.concessio"
     "net.audiorelay.AudioRelay"
-    "io.mrarm.mcpelauncher"
+    "org.gnome.baobab"
   ];
 
 }

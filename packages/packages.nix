@@ -177,4 +177,5 @@ pkgs: with pkgs; [
   appimage-run
   wails
   webkitgtk_6_0
+  kdePackages.kdenlive
 ]

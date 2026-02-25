@@ -13,8 +13,13 @@
     lazyvim-nix.url = "github:jla2000/lazyvim-nix";
     syd.url = "github:sidharthify/syd";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    sls-steam.url = "github:AceSLS/SLSsteam";
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
+
+    sls-steam = {
+      url = "github:AceSLS/SLSsteam";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = {

@@ -84,7 +84,7 @@
           environment.systemPackages = [
             zen-browser-source.packages.${system}.default
             syd.packages.${system}.default
-            sls-steam.packages.${system}.default
+            sls-steam.packages.${system}.wrapped
             pkgs.parsecgaming
           ];
         })

@@ -417,30 +417,9 @@
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_3",
         "parsecgaming": "parsecgaming",
-        "sls-steam": "sls-steam",
         "spicetify-nix": "spicetify-nix",
         "syd": "syd",
         "zen-browser-source": "zen-browser-source"
-      }
-    },
-    "sls-steam": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1769361037,
-        "narHash": "sha256-dWnjQpGNKEwIMPNoUp765q2QlVRCX58KbNm0ZBrTL80=",
-        "owner": "AceSLS",
-        "repo": "SLSsteam",
-        "rev": "6aae05be2fa2f8d5f1c5906658a3d41ad30d6352",
-        "type": "github"
-      },
-      "original": {
-        "owner": "AceSLS",
-        "repo": "SLSsteam",
-        "type": "github"
       }
     },
     "spicetify-nix": {

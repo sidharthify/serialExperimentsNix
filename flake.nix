@@ -15,11 +15,6 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
 
-    sls-steam = {
-      url = "github:AceSLS/SLSsteam";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs = {
@@ -33,7 +28,6 @@
     syd,
     nix-flatpak,
     parsecgaming,
-    sls-steam,
     ...
   }@inputs:
   let
@@ -84,7 +78,6 @@
           environment.systemPackages = [
             zen-browser-source.packages.${system}.default
             syd.packages.${system}.default
-            sls-steam.packages.${system}.wrapped
             pkgs.parsecgaming
           ];
         })

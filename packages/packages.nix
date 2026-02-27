@@ -178,4 +178,7 @@ pkgs: with pkgs; [
   wails
   webkitgtk_6_0
   kdePackages.kdenlive
+  ideviceinstaller
+  libimobiledevice
+  usbmuxd
 ]

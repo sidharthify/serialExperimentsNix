@@ -181,4 +181,5 @@ pkgs: with pkgs; [
   ideviceinstaller
   libimobiledevice
   usbmuxd
+  easyeffects
 ]

@@ -170,7 +170,7 @@ pkgs: with pkgs; [
   distrobox
   rclone
   glow
-  marktext
+  # marktext
   media-downloader
   gemini-cli
   go

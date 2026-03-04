@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "aerothemeplasma-nix": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1772518299,
+        "narHash": "sha256-2beZMz0uXELRqQ+Ux0hr4mJUYyd4nOC+rB1MTH8T28E=",
+        "owner": "nyakase",
+        "repo": "aerothemeplasma-nix",
+        "rev": "eca592808a759cc658c7c2675412a5e39be1b452",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nyakase",
+        "repo": "aerothemeplasma-nix",
+        "type": "github"
+      }
+    },
     "blame-me-nvim": {
       "flake": false,
       "locked": {
@@ -64,6 +85,24 @@
     },
     "flake-parts": {
       "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1772408722,
+        "narHash": "sha256-rHuJtdcOjK7rAHpHphUb1iCvgkU3GpfvicLMwwnfMT0=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "f20dc5d9b8027381c474144ecabc9034d6a839a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_2": {
+      "inputs": {
         "nixpkgs-lib": [
           "lazyvim-nix",
           "nixpkgs"
@@ -83,9 +122,9 @@
         "type": "github"
       }
     },
-    "flake-parts_2": {
+    "flake-parts_3": {
       "inputs": {
-        "nixpkgs-lib": "nixpkgs-lib"
+        "nixpkgs-lib": "nixpkgs-lib_2"
       },
       "locked": {
         "lastModified": 1769996383,
@@ -160,7 +199,7 @@
         "blame-me-nvim": "blame-me-nvim",
         "cmake-gtest-nvim": "cmake-gtest-nvim",
         "cmake-tools-nvim": "cmake-tools-nvim",
-        "flake-parts": "flake-parts",
+        "flake-parts": "flake-parts_2",
         "huez-nvim": "huez-nvim",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs"
@@ -221,7 +260,7 @@
     "nixcord": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "flake-parts": "flake-parts_2",
+        "flake-parts": "flake-parts_3",
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
@@ -255,6 +294,21 @@
       }
     },
     "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1772328832,
+        "narHash": "sha256-e+/T/pmEkLP6BHhYjx6GmwP5ivonQQn0bJdH9YrRB+Q=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "c185c7a5e5dd8f9add5b2f8ebeff00888b070742",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
+    "nixpkgs-lib_2": {
       "locked": {
         "lastModified": 1769909678,
         "narHash": "sha256-cBEymOf4/o3FD5AZnzC3J9hLbiZ+QDT/KDuyHXVJOpM=",
@@ -408,6 +462,7 @@
     },
     "root": {
       "inputs": {
+        "aerothemeplasma-nix": "aerothemeplasma-nix",
         "home-manager": "home-manager",
         "lazyvim-nix": "lazyvim-nix",
         "nix-flatpak": "nix-flatpak",

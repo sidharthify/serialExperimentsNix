@@ -15,6 +15,10 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
 
+    aerothemeplasma-nix = {
+      url = "github:nyakase/aerothemeplasma-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -28,6 +32,7 @@
     syd,
     nix-flatpak,
     parsecgaming,
+    aerothemeplasma-nix,
     ...
   }@inputs:
   let
@@ -49,6 +54,7 @@
         })
 
         ./nixos/configuration.nix
+	aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
 

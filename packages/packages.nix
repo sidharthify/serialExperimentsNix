@@ -182,4 +182,5 @@ pkgs: with pkgs; [
   libimobiledevice
   usbmuxd
   easyeffects
+  virt-manager
 ]

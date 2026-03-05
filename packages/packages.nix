@@ -183,4 +183,5 @@ pkgs: with pkgs; [
   usbmuxd
   easyeffects
   virt-manager
+  bluetuith
 ]

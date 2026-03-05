@@ -12,15 +12,13 @@
      "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
 
    # aerothemeplasma
-   #programs.aeroshell = {
-   #enable = true;
-   #fonts.enable = true;
-   #polkit.enable = true;
-   #aerothemeplasma = {
-     #enable = true;
-     #sddm.enable = true;
-     #plymouth.enable = true;
-   #};
- #};
+   programs.aeroshell = {
+   enable = true;
+   polkit.enable = true;
+   aerothemeplasma = {
+     enable = true;
+     sddm.enable = true;
+   };
+ };
 
 }

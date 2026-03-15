@@ -11,6 +11,7 @@
   };
 
   programs.nix-ld.enable = true;
+  services.usbmuxd.enable = true;
 
   programs.nh = {
     enable = true;

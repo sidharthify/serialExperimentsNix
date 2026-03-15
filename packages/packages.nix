@@ -6,7 +6,6 @@ pkgs: with pkgs; [
     sudo
     sof-firmware
     wget
-    neofetch
     git
     telegram-desktop
     hyfetch

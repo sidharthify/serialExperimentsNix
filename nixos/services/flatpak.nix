@@ -21,6 +21,7 @@
     "io.github.ronniedroid.concessio"
     "net.audiorelay.AudioRelay"
     "org.gnome.baobab"
+    "dev.khcrysalis.PlumeImpactor"
   ];
 
 }

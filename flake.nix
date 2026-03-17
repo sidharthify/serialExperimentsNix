@@ -14,6 +14,7 @@
     syd.url = "github:sidharthify/syd";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
+    victus-control.url = "github:sidharthify/victus-control-nix";
 
     aerothemeplasma-nix = {
       url = "github:nyakase/aerothemeplasma-nix";

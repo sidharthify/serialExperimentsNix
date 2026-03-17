@@ -13,7 +13,7 @@ pkgs: with pkgs; [
     stow
     nwg-look
     lutris-unwrapped
-    wineWowPackages.stable
+    wineWow64Packages.stable
     killall
     pywal
     unzip
@@ -49,10 +49,10 @@ pkgs: with pkgs; [
     android-tools
     apktool
     util-linux
-    xorg.libX11
-    xorg.libXft
-    xorg.libXrender
-    xorg.libXext
+    libx11
+    libxft
+    libxrender
+    libxext
     gcc
     libgcc
     glib
@@ -121,7 +121,7 @@ pkgs: with pkgs; [
     termius
     jq
     payload-dumper-go
-    heroic
+    # heroic
     tesseract
     fwupd
     lm_sensors

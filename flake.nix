@@ -14,12 +14,13 @@
     syd.url = "github:sidharthify/syd";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
-    victus-control.url = "github:sidharthify/victus-control-nix";
 
     aerothemeplasma-nix = {
       url = "github:nyakase/aerothemeplasma-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    arnis.url = "github:louis-e/arnis";
   };
 
   outputs = {
@@ -34,6 +35,7 @@
     nix-flatpak,
     parsecgaming,
     aerothemeplasma-nix,
+    arnis,
     ...
   }@inputs:
   let
@@ -41,7 +43,6 @@
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
-
       specialArgs = { inherit inputs; };
 
       modules = [
@@ -55,7 +56,7 @@
         })
 
         ./nixos/configuration.nix
-	aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
+        aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
 
@@ -75,7 +76,6 @@
           home-manager.sharedModules = [
             inputs.nixcord.homeModules.nixcord
           ];
-
           home-manager.extraSpecialArgs = {
             inherit spicetify-nix lazyvim-nix;
           };
@@ -86,6 +86,7 @@
             zen-browser-source.packages.${system}.default
             syd.packages.${system}.default
             pkgs.parsecgaming
+            arnis.packages.${system}.default
           ];
         })
       ];

@@ -184,4 +184,5 @@ pkgs: with pkgs; [
   bluetuith
   ifuse
   bubblewrap
+  speechd
 ]

@@ -64,7 +64,6 @@ pkgs: with pkgs; [
     pango
     atk
     at-spi2-core
-    steam-run
     nss
     fastfetch
     anydesk
@@ -184,4 +183,5 @@ pkgs: with pkgs; [
   virt-manager
   bluetuith
   ifuse
+  bubblewrap
 ]

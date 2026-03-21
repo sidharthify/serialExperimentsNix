@@ -130,7 +130,7 @@ pkgs: with pkgs; [
     brave
     # build error - imhex   
     tidal-hifi
-    # build error - pcsx2
+    pcsx2
     affine
     vlc
     freerdp

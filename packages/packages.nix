@@ -120,7 +120,6 @@ pkgs: with pkgs; [
     termius
     jq
     payload-dumper-go
-    # heroic
     tesseract
     fwupd
     lm_sensors

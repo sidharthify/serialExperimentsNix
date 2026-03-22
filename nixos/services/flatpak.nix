@@ -22,6 +22,7 @@
     "net.audiorelay.AudioRelay"
     "org.gnome.baobab"
     "dev.khcrysalis.PlumeImpactor"
+    "com.heroicgameslauncher.hgl"
   ];
 
 }

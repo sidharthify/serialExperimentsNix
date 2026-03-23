@@ -140,7 +140,7 @@ pkgs: with pkgs; [
   alacritty
   htop
   man-pages
-  winboat
+  # winboat
   gdb
   qemu
   gdb-dashboard
@@ -170,7 +170,7 @@ pkgs: with pkgs; [
   # marktext
   media-downloader
   gemini-cli
-  go
+  # go
   appimage-run
   wails
   webkitgtk_6_0

@@ -184,4 +184,5 @@ pkgs: with pkgs; [
   ifuse
   bubblewrap
   speechd
+  localsend
 ]

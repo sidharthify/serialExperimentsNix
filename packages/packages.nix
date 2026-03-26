@@ -38,7 +38,7 @@ pkgs: with pkgs; [
     vkd3d
     vulkan-tools
     gtk3
-    # build error: protonvpn-gui
+    protonvpn-gui
     lm_sensors
     hexyl
     zenity

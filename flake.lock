@@ -93,11 +93,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1774612867,
-        "narHash": "sha256-VVp4G4Zqh5a9XdGKxbwn2AwmsygbPRIiNVFzpiEUHGY=",
+        "lastModified": 1774613280,
+        "narHash": "sha256-D0F/7/hZ7vb8CxmuHB3oADoRiOYTEdKmea4fQfbHuKg=",
         "owner": "sidharthify",
         "repo": "DailyPersonalTerminalReport",
-        "rev": "3fcd5b40b4857f8971f984b0d0ce14a449b0826b",
+        "rev": "404e6a93c4730d6c0be8ea26dad810cbd53ace1c",
         "type": "github"
       },
       "original": {

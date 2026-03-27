@@ -7,6 +7,7 @@
     ./nixcord.nix
     ./spicetify.nix
     ./vscodium.nix
+    ./dptr.nix
   ];
 
 }

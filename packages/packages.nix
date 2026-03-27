@@ -170,7 +170,7 @@ pkgs: with pkgs; [
   # marktext
   media-downloader
   gemini-cli
-  # go
+  go
   appimage-run
   wails
   webkitgtk_6_0

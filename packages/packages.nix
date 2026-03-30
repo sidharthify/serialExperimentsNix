@@ -190,4 +190,5 @@ pkgs: with pkgs; [
   screen
   steam-run
   tigervnc
+  rdesktop
 ]

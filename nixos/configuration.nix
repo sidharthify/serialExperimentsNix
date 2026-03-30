@@ -37,7 +37,7 @@
     ./services/openrgb.nix
     ./services/waydroid.nix
 
-    ./users/bash.nix
+    ./users/fish.nix
     ./users/sidharthify.nix
   ];
 

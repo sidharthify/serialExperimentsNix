@@ -15,15 +15,15 @@
 
   networking.firewall.allowedTCPPorts = [ 25565 24800 5520 59100 59200 3478 443 ];
   networking.firewall.allowedUDPPorts = [ 5520 ];
-  networking.enableIPv6 = false;
+  networking.enableIPv6 = true;
 
   boot.kernel.sysctl = {
     "net.ipv4.tcp_congestion_control" = "bbr";
     "net.core.default_qdisc" = "fq";
     "net.ipv4.tcp_slow_start_after_idle" = 0;
     "net.ipv4.tcp_mtu_probing" = 1;
-    "net.ipv6.conf.all.mldv2_unsolicited_report_interval" = 0;
-    "net.ipv6.conf.default.mldv2_unsolicited_report_interval" = 0;
+    "net.ipv6.conf.all.mldv2_unsolicited_report_interval" = 1;
+    "net.ipv6.conf.default.mldv2_unsolicited_report_interval" = 1;
   };
 
   # Load required modules for BBR

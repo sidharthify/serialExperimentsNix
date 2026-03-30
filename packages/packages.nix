@@ -185,4 +185,5 @@ pkgs: with pkgs; [
   bubblewrap
   speechd
   localsend
+  microsoft-edge
 ]

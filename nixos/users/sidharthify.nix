@@ -4,7 +4,7 @@
   users.users.sidharthify = {
     isNormalUser = true;
     description = "sidharthify";
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
 
     extraGroups = [
       "networkmanager"

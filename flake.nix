@@ -21,7 +21,6 @@
     };
 
     arnis.url = "github:louis-e/arnis";
-    dptr.url = "github:sidharthify/DailyPersonalTerminalReport";
   };
 
   outputs = {
@@ -37,7 +36,6 @@
     parsecgaming,
     aerothemeplasma-nix,
     arnis,
-    dptr,
     ...
   }@inputs:
   let
@@ -89,7 +87,6 @@
             syd.packages.${system}.default
             pkgs.parsecgaming
             arnis.packages.${system}.default
-            dptr.packages.${system}.default
           ];
         })
       ];

@@ -31,7 +31,7 @@
 
       # syncnix
       function syncnix
-        /etc/nixos/scripts/sync-nixos.sh $argv
+        bash /etc/nixos/scripts/sync-nixos.sh $argv
       end
     '';
   };

@@ -189,4 +189,5 @@ pkgs: with pkgs; [
   steamcmd
   screen
   steam-run
+  socat
 ]

@@ -16,6 +16,7 @@
   networking.firewall.allowedTCPPorts = [ 25565 24800 5520 59100 59200 3478 443 32330 ];
   networking.firewall.allowedUDPPorts = [ 5520 7777 7778 27015];
   networking.enableIPv6 = true;
+  networking.firewall.trustedInterfaces = [ "tailscale0" ];
 
   boot.kernel.sysctl = {
     "net.ipv4.tcp_congestion_control" = "bbr";

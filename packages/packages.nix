@@ -186,4 +186,7 @@ pkgs: with pkgs; [
   speechd
   localsend
   microsoft-edge
+  steamcmd
+  screen
+  steam-run
 ]

@@ -13,8 +13,8 @@
   # Prevent NetworkManager from resetting MTU and disable WiFi power save (1=keep, 2=disable, 3=enable)
   networking.networkmanager.wifi.powersave = false;
 
-  networking.firewall.allowedTCPPorts = [ 25565 24800 5520 59100 59200 3478 443 ];
-  networking.firewall.allowedUDPPorts = [ 5520 ];
+  networking.firewall.allowedTCPPorts = [ 25565 24800 5520 59100 59200 3478 443 32330 ];
+  networking.firewall.allowedUDPPorts = [ 5520 7777 7778 27015];
   networking.enableIPv6 = true;
 
   boot.kernel.sysctl = {

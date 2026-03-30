@@ -36,6 +36,7 @@
     ./services/tmate.nix
     ./services/openrgb.nix
     ./services/waydroid.nix
+    ./services/tailscale.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix

@@ -39,6 +39,7 @@
 
     ./users/fish.nix
     ./users/sidharthify.nix
+    ./users/arkserver.nix
   ];
 
   environment.systemPackages = import ../packages/packages.nix pkgs;

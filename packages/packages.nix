@@ -191,4 +191,5 @@ pkgs: with pkgs; [
   steam-run
   tigervnc
   rdesktop
+  epy
 ]

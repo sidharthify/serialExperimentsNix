@@ -192,4 +192,5 @@ pkgs: with pkgs; [
   tigervnc
   rdesktop
   epy
+  ffmpeg
 ]

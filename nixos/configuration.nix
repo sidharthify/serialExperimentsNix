@@ -37,6 +37,7 @@
     ./services/openrgb.nix
     ./services/waydroid.nix
     ./services/tailscale.nix
+    ./services/darling.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix

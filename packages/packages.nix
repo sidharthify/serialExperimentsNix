@@ -193,5 +193,4 @@ pkgs: with pkgs; [
   rdesktop
   epy
   ffmpeg
-  strawberry
 ]

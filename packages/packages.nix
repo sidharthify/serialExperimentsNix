@@ -193,4 +193,5 @@ pkgs: with pkgs; [
   rdesktop
   epy
   ffmpeg
+  audacious
 ]

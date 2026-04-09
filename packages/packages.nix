@@ -194,5 +194,4 @@ pkgs: with pkgs; [
   epy
   ffmpeg
   audacious
-  rustdesk
 ]

@@ -195,4 +195,5 @@ pkgs: with pkgs; [
   ffmpeg
   audacious
   remmina
+  code-cursor
 ]

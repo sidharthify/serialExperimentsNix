@@ -196,4 +196,5 @@ pkgs: with pkgs; [
   audacious
   remmina
   code-cursor
+  sysbench
 ]

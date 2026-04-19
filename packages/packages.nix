@@ -197,4 +197,5 @@ pkgs: with pkgs; [
   remmina
   code-cursor
   sysbench
+  wipe
 ]

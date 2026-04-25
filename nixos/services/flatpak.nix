@@ -23,6 +23,7 @@
     "org.gnome.baobab"
     "dev.khcrysalis.PlumeImpactor"
     "com.heroicgameslauncher.hgl"
+    "com.protonvpn.www"
   ];
 
 }

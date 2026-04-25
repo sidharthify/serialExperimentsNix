@@ -38,7 +38,6 @@ pkgs: with pkgs; [
     vkd3d
     vulkan-tools
     gtk3
-    proton-vpn
     lm_sensors
     hexyl
     zenity

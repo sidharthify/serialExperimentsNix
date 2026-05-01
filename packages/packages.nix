@@ -197,4 +197,5 @@ pkgs: with pkgs; [
   code-cursor
   sysbench
   wipe
+  shadps4
 ]

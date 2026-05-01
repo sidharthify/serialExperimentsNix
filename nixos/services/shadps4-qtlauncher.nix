@@ -14,7 +14,7 @@ let
       owner = "shadps4-emu";
       repo = "shadps4-qtlauncher";
       rev = "c39f5977f667e4fea126a2d6d2ab5cb68efcda6a";
-      hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+      hash = "sha256-mStjj6HKlIUHpHrMuURfKESZoQbNXBQgBe2Gj8/udsk=";
       fetchSubmodules = true;
     };
 
@@ -28,37 +28,24 @@ let
     ];
 
     buildInputs = with pkgs; [
-      # Qt6
       qt6.qtbase
       qt6.qttools
       qt6.qtmultimedia
       qt6.qtwayland
-
-      # Audio
       openal
       libpulseaudio
-
-      # Vulkan
       vulkan-headers
       vulkan-loader
-
-      # SDL / input
       SDL2
       sdl3
-
-      # Display / windowing
       libxkbcommon
       wayland
       wayland-protocols
-      xorg.libxcb
-      xorg.xcbutil
-      xorg.xcbutilkeysyms
-      xorg.xcbutilwm
-
-      # Crypto / networking
+      libxcb
+      xcbutil
+      xcbutilkeysyms
+      xcbutilwm
       openssl
-
-      # Misc
       fmt
       libpng
       libglvnd
@@ -66,7 +53,6 @@ let
     ];
 
     cmakeFlags = [
-      # Disable auto-update (requires matching remote URL check in CMake)
       "-DENABLE_UPDATER=OFF"
       # Provide static git info so CMake doesn't call git at configure time
       "-DGIT_REV=${src.rev}"
@@ -74,8 +60,6 @@ let
       "-DGIT_BRANCH=main"
     ];
 
-    # CMakeLists.txt calls `git rev-list` etc. at configure time.
-    # We pre-create a minimal git repo so those calls succeed in the sandbox.
     preConfigure = ''
       git init -q
       git config user.email "nix@build"

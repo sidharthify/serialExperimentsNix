@@ -13,6 +13,7 @@
       "dialout"
       "docker"
       "audio"
+      "input"
     ];
 
     packages = with pkgs; [

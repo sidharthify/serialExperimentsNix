@@ -67,6 +67,7 @@ in python3Packages.buildPythonApplication {
     cp main.py $out/lib/pydualsensex/main.py
     cat > $out/bin/pydualsensex << EOF
 #!/bin/sh
+export LD_LIBRARY_PATH="${hidapi}/lib:${libusb1}/lib:\$LD_LIBRARY_PATH"
 exec ${pythonEnv}/bin/python $out/lib/pydualsensex/main.py "\$@"
 EOF
     chmod +x $out/bin/pydualsensex

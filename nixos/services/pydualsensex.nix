@@ -34,6 +34,7 @@ in {
     systemd.user.services.pydualsensex = {
       description = "pydualsensex — DualSense adaptive trigger bridge for BeamNG";
       after = [ "graphical-session.target" ];
+      wantedBy = [ "graphical-session.target" ];
       partOf = [ "graphical-session.target" ];
       serviceConfig = {
         ExecStart = "${pkg}/bin/pydualsensex";

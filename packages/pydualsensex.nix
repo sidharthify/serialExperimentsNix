@@ -47,6 +47,7 @@ let
     };
   };
 
+   pythonEnv = python3Packages.python.withPackages (_: [ pydualsense ]);
 in python3Packages.buildPythonApplication {
   pname = "pydualsensex";
   version = "unstable-2024";
@@ -60,16 +61,14 @@ in python3Packages.buildPythonApplication {
 
   format = "other";
 
-  propagatedBuildInputs = [ pydualsense ];
-
   dontBuild = true;
   installPhase = ''
     mkdir -p $out/bin $out/lib/pydualsensex
     cp main.py $out/lib/pydualsensex/main.py
     cat > $out/bin/pydualsensex << EOF
-    #!/bin/sh
-    exec ${python3Packages.python.interpreter} $out/lib/pydualsensex/main.py "\$@"
-    EOF
+#!/bin/sh
+exec ${pythonEnv}/bin/python $out/lib/pydualsensex/main.py "\$@"
+EOF
     chmod +x $out/bin/pydualsensex
   '';
 

@@ -36,6 +36,10 @@ let
 
     format = "pyproject";
 
+    postPatch = ''
+      sed -i 's/self.writeReport(outReport)/try:\n                    self.writeReport(outReport)\n                except IOError:\n                    pass/' pydualsense/pydualsense.py
+    '';
+
     propagatedBuildInputs = [ hidapi-usb ];
     nativeBuildInputs = [ python3Packages.poetry-core ];
     doCheck = false;

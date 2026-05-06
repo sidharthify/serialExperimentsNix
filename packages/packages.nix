@@ -197,4 +197,5 @@ pkgs: with pkgs; [
   sysbench
   wipe
   shadps4
+  kdePackages.qtwebengine
 ]

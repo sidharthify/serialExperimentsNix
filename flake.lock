@@ -534,11 +534,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1778087198,
-        "narHash": "sha256-tcLMiQ6AsoUDNu4pr9Bb+PFg0LCkmcSmWydHJ+jStM0=",
+        "lastModified": 1778087437,
+        "narHash": "sha256-RkRb/9qD8BSj1L5WeEOy0kWfotTxQ0Ha1qOvU7b4jNE=",
         "owner": "sidharthify",
         "repo": "syd",
-        "rev": "868afc4a532f3e7a205f163a17573248dcb8a994",
+        "rev": "09557ab460f7bed5f65b21f608ed743d0a7e5d60",
         "type": "github"
       },
       "original": {

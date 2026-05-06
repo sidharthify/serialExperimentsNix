@@ -69,7 +69,6 @@ pkgs: with pkgs; [
     tmate-ssh-server
     tmate
     pipx
-    blueman
     pavucontrol
     file
     erofs-utils

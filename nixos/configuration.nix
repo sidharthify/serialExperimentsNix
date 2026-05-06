@@ -37,7 +37,6 @@
     ./services/openrgb.nix
     ./services/waydroid.nix
     ./services/tailscale.nix
-    ./services/pydualsensex.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix
@@ -47,6 +46,4 @@
     (pkgs.callPackage ./services/darling.nix { })
   ];
   system.stateVersion = "25.11";
-  
-  services.pydualsensex.enable = true;
 }

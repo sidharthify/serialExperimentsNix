@@ -20,7 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    arnis.url = "github:louis-e/arnis";
   };
 
   outputs = {
@@ -35,7 +34,6 @@
     nix-flatpak,
     parsecgaming,
     aerothemeplasma-nix,
-    arnis,
     ...
   }@inputs:
   let
@@ -86,7 +84,6 @@
             zen-browser-source.packages.${system}.default
             syd.packages.${system}.default
             pkgs.parsecgaming
-            arnis.packages.${system}.default
           ];
         })
       ];

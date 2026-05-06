@@ -1,30 +1,6 @@
 { lib, python3Packages, fetchFromGitHub, hidapi, libusb1 }:
 
 let
-  # hidapi-usb: required by pydualsense, not yet in nixpkgs
-  hidapi-usb = python3Packages.buildPythonPackage rec {
-    pname = "hidapi-usb";
-    version = "0.3.2";
-
-    src = python3Packages.fetchPypi {
-      inherit version;
-      pname = "hidapi_usb";
-      hash = "sha256-oxp+2i+qqYd1uwiS2Dh8/PzO62iYQQXpR936MnDIFk0=";
-    };
-
-    format = "pyproject";
-
-    buildInputs = [ hidapi libusb1 ];
-    nativeBuildInputs = with python3Packages; [ cython setuptools ];
-    propagatedBuildInputs = [ python3Packages.cffi ];
-    doCheck = false;
-
-    meta = {
-      description = "Python bindings for hidapi";
-      license = lib.licenses.gpl3Only;
-    };
-  };
-
   pydualsense = python3Packages.buildPythonPackage rec {
     pname = "pydualsense";
     version = "0.7.5";
@@ -36,7 +12,11 @@ let
 
     format = "pyproject";
 
-    propagatedBuildInputs = [ hidapi-usb ];
+    postPatch = ''
+      sed -i 's/hidapi-usb.*/hidapi = "*"/g' pyproject.toml
+    '';
+
+    propagatedBuildInputs = [ python3Packages.hidapi ];
     nativeBuildInputs = [ python3Packages.poetry-core ];
     doCheck = false;
 

@@ -22,8 +22,14 @@ in {
     # udev rule: grant hidraw access to DualSense without root
     # Sony idVendor=054c, DualSense idProduct=0ce6
     services.udev.extraRules = ''
-      KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="0ce6", \
-        MODE="0660", GROUP="input", TAG+="uaccess"
+      # DualSense USB
+      KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="0ce6", MODE="0660", GROUP="input", TAG+="uaccess"
+      # DualSense Bluetooth
+      KERNEL=="hidraw*", KERNELS=="*054C:0CE6*", MODE="0660", GROUP="input", TAG+="uaccess"
+      # DualSense Edge USB
+      KERNEL=="hidraw*", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="0df2", MODE="0660", GROUP="input", TAG+="uaccess"
+      # DualSense Edge Bluetooth
+      KERNEL=="hidraw*", KERNELS=="*054C:0DF2*", MODE="0660", GROUP="input", TAG+="uaccess"
     '';
 
     # add pydualsensex to PATH

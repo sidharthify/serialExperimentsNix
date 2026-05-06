@@ -15,6 +15,11 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
 
+    tuxManager = {
+      url = "github:benapetr/TuxManager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     aerothemeplasma-nix = {
       url = "github:nyakase/aerothemeplasma-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,6 +39,7 @@
     nix-flatpak,
     parsecgaming,
     aerothemeplasma-nix,
+    tuxManager,
     ...
   }@inputs:
   let
@@ -84,6 +90,7 @@
             zen-browser-source.packages.${system}.default
             syd.packages.${system}.default
             pkgs.parsecgaming
+            tuxManager.packages.${system}.default
           ];
         })
       ];

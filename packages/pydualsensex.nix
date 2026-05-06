@@ -37,7 +37,12 @@ let
     format = "pyproject";
 
     postPatch = ''
+      # 1. Ignore IOError on write to prevent Bluetooth EAGAIN crashes
       sed -i 's/self.writeReport(outReport)/try:\n                    self.writeReport(outReport)\n                except IOError:\n                    pass/' pydualsense/pydualsense.py
+      
+      # 2. Add sequence number tracking for Bluetooth output reports to prevent controller freezing
+      sed -i 's/self.states = None/self.states = None\n        self.output_seq = 0/' pydualsense/pydualsense.py
+      sed -i 's/outReport\[1\] = 0x02/outReport[1] = 0x02 | (self.output_seq << 4)\n            self.output_seq = (self.output_seq + 1) % 16/' pydualsense/pydualsense.py
     '';
 
     propagatedBuildInputs = [ hidapi-usb ];

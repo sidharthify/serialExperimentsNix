@@ -161,7 +161,6 @@ pkgs: with pkgs; [
   vscode
   jdk17
   antigravity
-  google-chrome
   distrobox
   rclone
   glow

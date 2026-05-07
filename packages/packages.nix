@@ -198,4 +198,5 @@ pkgs: with pkgs; [
   wipe
   shadps4
   kdePackages.qtwebengine
+  chromium
 ]

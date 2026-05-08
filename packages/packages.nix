@@ -198,4 +198,5 @@ pkgs: with pkgs; [
   shadps4
   kdePackages.qtwebengine
   chromium
+  altus
 ]

@@ -14,6 +14,7 @@
     syd.url = "github:sidharthify/syd";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
 
     tuxManager = {
       url = "github:benapetr/TuxManager";
@@ -56,6 +57,7 @@
               parsecgaming =
                 parsecgaming.packages.${system}.parsecgaming;
             })
+              inputs.millennium.overlays.default
           ];
         })
 

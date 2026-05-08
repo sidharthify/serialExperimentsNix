@@ -86,7 +86,7 @@
         shikiCodeblocks.enable = true;
         spotifyControls.enable = true;
         userVoiceShow.enable = true;
-        ReviewDB.enable = true;        
+        ReviewDB.enable = true;
       };
     };
   };

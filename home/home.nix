@@ -7,7 +7,10 @@
     ./nixcord.nix
     ./spicetify.nix
     ./vscodium.nix
-    ./dptr.nix
+    ./eldenring.nix
+    ./zen.nix
+    ./kde.nix
   ];
 
+  };
 }

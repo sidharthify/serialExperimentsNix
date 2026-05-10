@@ -15,6 +15,14 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
 
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
+    catppuccin.url = "github:catppuccin/nix";
+
     millennium = {
       url = "github:sidharthify/Millennium?tag=latest&dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +53,8 @@
     parsecgaming,
     aerothemeplasma-nix,
     tuxManager,
+    plasma-manager,
+    catppuccin,
     ...
   }@inputs:
   let
@@ -85,9 +95,11 @@
 
           home-manager.sharedModules = [
             inputs.nixcord.homeModules.nixcord
+            plasma-manager.homeManagerModules.plasma-manager
+            catppuccin.homeManagerModules.catppuccin
           ];
           home-manager.extraSpecialArgs = {
-            inherit spicetify-nix lazyvim-nix;
+            inherit spicetify-nix lazyvim-nix inputs;
           };
         }
 

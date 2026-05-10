@@ -8,42 +8,33 @@
     ./hardware/bluetooth.nix
     ./hardware/intel.nix
     ./hardware/nvidia.nix
-    ./hardware/sata.nix 
+    ./hardware/sata.nix
 
-    ./system/bootloader.nix
+    ./system/base.nix
     ./system/desktop.nix
     ./system/fonts.nix
     ./system/kernel.nix
     ./system/networking.nix
-    ./system/openssh.nix
     ./system/opengl.nix
-    ./system/xdg-portal.nix
-    ./system/locale.nix
-    ./system/time.nix
-    ./system/xkb.nix
-    ./system/printing.nix
     ./system/nix-settings.nix
-    ./system/auto-upgrade.nix
     ./system/android-dev.nix
-    ./system/zram.nix
 
     ./services/docker-containers.nix
-    ./services/orca.nix
+    ./services/misc.nix
     ./services/pipewire.nix
     ./services/steam.nix
-    ./services/zerotier-config.nix
     ./services/flatpak.nix
-    ./services/tmate.nix
-    ./services/openrgb.nix
-    ./services/waydroid.nix
     ./services/tailscale.nix
+    ./services/darling.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix
     ./users/arkserver.nix
   ];
+
   environment.systemPackages = (import ../packages/packages.nix pkgs) ++ [
     (pkgs.callPackage ./services/darling.nix { })
   ];
+
   system.stateVersion = "25.11";
 }

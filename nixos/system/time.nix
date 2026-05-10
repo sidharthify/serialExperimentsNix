@@ -1,4 +1,0 @@
-{ ... }:
-{
-  time.timeZone = "Asia/Kolkata";
-}

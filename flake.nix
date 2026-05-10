@@ -95,8 +95,8 @@
 
           home-manager.sharedModules = [
             inputs.nixcord.homeModules.nixcord
-            plasma-manager.homeManagerModules.plasma-manager
-            catppuccin.homeManagerModules.catppuccin
+            plasma-manager.homeModules.plasma-manager
+            catppuccin.homeModules.catppuccin
           ];
           home-manager.extraSpecialArgs = {
             inherit spicetify-nix lazyvim-nix inputs;

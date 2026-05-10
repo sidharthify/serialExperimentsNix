@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   programs.vscode = {
@@ -31,7 +31,7 @@
     ];
     userSettings = {
       "workbench.colorTheme" = "Catppuccin Mocha";
-      "workbench.iconTheme" = "material-icon-theme";
+      "workbench.iconTheme" = lib.mkForce "material-icon-theme";
     };
   };
 };

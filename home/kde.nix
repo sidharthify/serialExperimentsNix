@@ -21,7 +21,6 @@ in
     enable = true;
     flavor = "mocha";
     accent = "mauve";
-    kde.enable = true;
   };
 
   home.packages = [ pkgs.catppuccin-kde ];
@@ -55,11 +54,11 @@ in
         family = "Inter";
         pointSize = 10;
       };
-      toolbarFont = {
+      toolbar = {
         family = "Inter";
         pointSize = 10;
       };
-      smallFont = {
+      small = {
         family = "Inter";
         pointSize = 10;
       };

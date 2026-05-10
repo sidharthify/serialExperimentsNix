@@ -57,7 +57,7 @@ in
         "${destDir}/modengine2/logs"
 
       $DRY_RUN_CMD ${pkgs.rsync}/bin/rsync \
-        --archive \
+        --archive --chmod=u+w \
         --ignore-existing \
         --exclude="modengine2/logs/" \
         "${eldenringStore}/" \

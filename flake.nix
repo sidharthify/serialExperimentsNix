@@ -21,7 +21,7 @@
     };
 
     tuxManager = {
-      url = "github:benapetr/TuxManager";
+      url = "github:sidharthify/TuxManager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

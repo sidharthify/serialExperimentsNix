@@ -769,11 +769,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778405300,
-        "narHash": "sha256-xSGr0oMmwxb5bgn/746Z6MHfngarwM0OcTWtpgcxXZ4=",
+        "lastModified": 1778405523,
+        "narHash": "sha256-jYCRtMEs1HWz4N7ZVSm5N1Nyl2DUYAht/aa7IAXGyLo=",
         "owner": "sidharthify",
         "repo": "TuxManager",
-        "rev": "9c625bcebc2cc4b0352166bd253e6a6409990169",
+        "rev": "4e539a5948d6673d61c3044ac5c9b03f4a0009dc",
         "type": "github"
       },
       "original": {

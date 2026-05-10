@@ -16,13 +16,6 @@ let
   wallpaperPath = "${config.home.homeDirectory}/Pictures/nixos-wallpaper-catppuccin-mocha.png";
 in
 {
-  # ── Catppuccin theme ────────────────────────────────────────────────────────
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "mauve";
-  };
-
   home.packages = [ pkgs.catppuccin-kde ];
 
   home.file."Pictures/nixos-wallpaper-catppuccin-mocha.png".source = wallpaper;

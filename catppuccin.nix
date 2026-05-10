@@ -15,12 +15,7 @@
       flavor = "mocha";
       accent = "mauve";
       cursors.enable = false;
-      gtk.enable = true;
-      gtk.icon.enable = true;
     };
 
-    gtk = {
-      enable = true;
-    };
   };
 }

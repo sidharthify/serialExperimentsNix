@@ -18,7 +18,6 @@
     ./system/opengl.nix
     ./system/nix-settings.nix
     ./system/android-dev.nix
-    ./system/catppuccin.nix
 
     ./services/docker-containers.nix
     ./services/misc.nix

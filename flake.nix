@@ -79,6 +79,8 @@
         aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
+        catppuccin.nixosModules.catppuccin
+        ./catppuccin.nix
 
         {
           home-manager.useGlobalPkgs = true;

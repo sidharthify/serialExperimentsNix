@@ -26,4 +26,6 @@
   };
   services.orca.enable    = false;
   services.speechd.enable = false;
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 }

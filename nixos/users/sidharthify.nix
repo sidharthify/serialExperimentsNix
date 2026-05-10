@@ -9,7 +9,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
-      "libvirt"
+      "libvirtd"
       "dialout"
       "docker"
       "audio"

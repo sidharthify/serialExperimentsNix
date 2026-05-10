@@ -16,7 +16,7 @@
     parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
 
     millennium = {
-      url = "github:SteamClientHomebrew/Millennium?tag=latest&dir=packages/nix";
+      url = "github:sidharthify/Millennium?tag=latest&dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -25,15 +25,10 @@
     ./services/steam.nix
     ./services/flatpak.nix
     ./services/tailscale.nix
-    ./services/darling.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix
     ./users/arkserver.nix
-  ];
-
-  environment.systemPackages = (import ../packages/packages.nix pkgs) ++ [
-    (pkgs.callPackage ./services/darling.nix { })
   ];
 
   system.stateVersion = "25.11";

@@ -224,8 +224,8 @@ in
       kwinrc.Plugins.fullscreenEnabled                       = false;
       kwinrc.Plugins.maximizeEnabled                         = false;
       kwinrc.Plugins.scaleEnabled                            = false;
-      kwinrc.NightColor.Mode                                 = "Constant";
-      kwinrc.NightColor.NightTemperature                     = 4000;
+      #kwinrc.NightColor.Mode                                 = "Constant";
+      #kwinrc.NightColor.NightTemperature                     = 4000;
       kwinrc."Tiling/dedbc80a-6b77-44d3-9c4e-6aaede62f9ae/8382b5c2-41b5-4ab2-9a04-9eccb2c10f30".tiles =
         "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
       kwinrc."Tiling/dedbc80a-6b77-44d3-9c4e-6aaede62f9ae/8382b5c2-41b5-4ab2-9a04-9eccb2c10f30".padding = 4;

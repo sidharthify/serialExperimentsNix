@@ -199,4 +199,5 @@ pkgs: with pkgs; [
   kdePackages.qtwebengine
   chromium
   zapzap
+  rustdesk
 ]

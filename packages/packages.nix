@@ -200,4 +200,5 @@ pkgs: with pkgs; [
   chromium
   zapzap
   rustdesk
+  google-chrome
 ]

@@ -22,11 +22,7 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
-
-    millennium = {
-      url = "github:sidharthify/Millennium?tag=latest&dir=packages/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    millennium.url= "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
 
     tuxManager = {
       url = "github:sidharthify/TuxManager";

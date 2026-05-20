@@ -23,6 +23,7 @@
 
     catppuccin.url = "github:catppuccin/nix";
     millennium.url= "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
+    balena-etcher.url = "github:sidharthify/balenaEtcher-flake";
 
     tuxManager = {
       url = "github:sidharthify/TuxManager";
@@ -107,6 +108,7 @@
             syd.packages.${system}.default
             pkgs.parsecgaming
             tuxManager.packages.${system}.default
+            inputs.balena-etcher.packages.${system}.default
           ];
         })
       ];

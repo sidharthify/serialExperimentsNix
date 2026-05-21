@@ -5,8 +5,15 @@
 
 {
   # bl
-  boot.loader.systemd-boot.enable     = true;
+  boot.loader.systemd-boot = {
+    enable = true;
+    configurationLimit = 10;
+  };
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = 1;
+
+  boot.plymouth.enable = true;
+  boot.initrd.systemd.enable = true;
 
   # time
   time.timeZone = "Asia/Kolkata";

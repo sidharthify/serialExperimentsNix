@@ -4,13 +4,19 @@
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
-  # Use DHCP and set MTU to 1372 for Jio 5G compatibility
-  networking.interfaces.wlp3s0 = {
-    useDHCP = true;
-    mtu = 1372;
+  # NM handles DHCP, don't use per-interface useDHCP
+  networking.useDHCP = false;
+
+  # MTU 1372 for Jio 5G — set via NM connection override
+  networking.networkmanager.connectionConfig = {
+    "ethernet.mtu" = 1372;
+    "wifi.mtu" = 1372;
   };
 
-  # Prevent NetworkManager from resetting MTU and disable WiFi power save (1=keep, 2=disable, 3=enable)
+  # Disable NM-wait-online
+  systemd.services.NetworkManager-wait-online.enable = false;
+
+  # Disable WiFi power save
   networking.networkmanager.wifi.powersave = false;
 
   networking.firewall.enable = false; # for now
@@ -18,7 +24,7 @@
  # networking.firewall.allowedUDPPorts = [ 5520 7777 7778 27015];
   networking.enableIPv6 = true;
   #networking.firewall.trustedInterfaces = [ "tailscale0" ];
-  networking.nameservers = [ "1.1.1.1" "1.0.0.1" ]; 
+  networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
 
   boot.kernel.sysctl = {
     "net.ipv4.tcp_congestion_control" = "bbr";

@@ -8,8 +8,9 @@
   };
 
   catppuccin.cursors.enable = false;
+  catppuccin.plymouth.enable = true;
 
-  home-manager.users.sidharthify = {
+  home-manager.users.sidharthify = {  
     catppuccin = {
       enable = true;
       flavor = "mocha";

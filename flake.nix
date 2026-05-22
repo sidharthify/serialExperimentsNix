@@ -7,22 +7,23 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix.url      = "github:Gerg-L/spicetify-nix";
     zen-browser-source.url = "github:youwen5/zen-browser-flake";
-    nixcord.url = "github:KaylorBen/nixcord";
-    lazyvim-nix.url = "github:jla2000/lazyvim-nix";
-    syd.url = "github:sidharthify/syd";
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
-    parsecgaming.url = "github:DarthPJB/parsec-gaming-nix";
+    nixcord.url            = "github:KaylorBen/nixcord";
+    lazyvim-nix.url        = "github:jla2000/lazyvim-nix";
+    syd.url                = "github:sidharthify/syd";
+    nix-flatpak.url        = "github:gmodena/nix-flatpak";
+    parsecgaming.url       = "github:DarthPJB/parsec-gaming-nix";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows     = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
-    millennium.url= "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
+    catppuccin.url    = "github:catppuccin/nix";
+    millennium.url    = "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
     balena-etcher.url = "github:sidharthify/balenaEtcher-flake";
 
     tuxManager = {
@@ -34,7 +35,6 @@
       url = "github:nyakase/aerothemeplasma-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
   outputs = {
@@ -52,6 +52,7 @@
     tuxManager,
     plasma-manager,
     catppuccin,
+    nix-cachyos-kernel,
     ...
   }@inputs:
   let
@@ -65,10 +66,10 @@
         ({ pkgs, ... }: {
           nixpkgs.overlays = [
             (final: prev: {
-              parsecgaming =
-                parsecgaming.packages.${system}.parsecgaming;
+              parsecgaming = parsecgaming.packages.${system}.parsecgaming;
             })
-                inputs.millennium.overlays.default
+            inputs.millennium.overlays.default
+            inputs.nix-cachyos-kernel.overlays.default
           ];
         })
 
@@ -80,8 +81,8 @@
         ./catppuccin.nix
 
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
+          home-manager.useGlobalPkgs    = true;
+          home-manager.useUserPackages  = true;
 
           home-manager.users.sidharthify = {
             imports = [

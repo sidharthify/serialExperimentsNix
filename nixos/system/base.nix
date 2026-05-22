@@ -6,14 +6,14 @@
 {
   # bl
   boot.loader.systemd-boot = {
-    enable = true;
+    enable             = true;
     configurationLimit = 10;
   };
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout = 1;
+  boot.loader.timeout                  = 1;
 
-  boot.plymouth.enable = true;
-  boot.initrd.systemd.enable = true;
+  boot.plymouth.enable         = true;
+  boot.initrd.systemd.enable   = true;
 
   # time
   time.timeZone = "Asia/Kolkata";
@@ -46,20 +46,21 @@
     enable        = true;
     algorithm     = "zstd";
     memoryPercent = 70;
+    priority      = 100;    # always hit ZRAM before the 64GB swapfile
   };
 
   # openssh
   services.openssh = {
-    enable = true;
-    settings.PermitRootLogin          = "no";
-    settings.PasswordAuthentication   = true;
+    enable                        = true;
+    settings.PermitRootLogin      = "no";
+    settings.PasswordAuthentication = true;
   };
 
   # xdg portal
-  xdg.portal.enable              = true;
-  xdg.portal.extraPortals        = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.enable             = true;
+  xdg.portal.extraPortals       = [ pkgs.xdg-desktop-portal-gtk ];
   xdg.portal.xdgOpenUsePortal   = true;
-  services.dbus.enable           = true;
+  services.dbus.enable          = true;
 
   # auto upgrade
   system.autoUpgrade.enable      = true;

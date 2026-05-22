@@ -18,7 +18,7 @@
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows     = "nixpkgs";
+      inputs.nixpkgs.follows      = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
 
@@ -42,17 +42,11 @@
     nixpkgs,
     home-manager,
     spicetify-nix,
-    zen-browser-source,
-    nixcord,
     lazyvim-nix,
-    syd,
-    nix-flatpak,
-    parsecgaming,
-    aerothemeplasma-nix,
-    tuxManager,
     plasma-manager,
     catppuccin,
-    nix-cachyos-kernel,
+    aerothemeplasma-nix,
+    nix-flatpak,
     ...
   }@inputs:
   let
@@ -63,35 +57,17 @@
       specialArgs = { inherit inputs; };
 
       modules = [
-        ({ pkgs, ... }: {
-          nixpkgs.overlays = [
-            (final: prev: {
-              parsecgaming = parsecgaming.packages.${system}.parsecgaming;
-            })
-            inputs.millennium.overlays.default
-            inputs.nix-cachyos-kernel.overlays.default
-          ];
-        })
-
         ./nixos/configuration.nix
         aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
         catppuccin.nixosModules.catppuccin
-        ./catppuccin.nix
 
         {
-          home-manager.useGlobalPkgs    = true;
-          home-manager.useUserPackages  = true;
+          home-manager.useGlobalPkgs   = true;
+          home-manager.useUserPackages = true;
 
-          home-manager.users.sidharthify = {
-            imports = [
-              ./home/home.nix
-              ./home/spicetify.nix
-              ./home/vscodium.nix
-              ./home/nixcord.nix
-            ];
-          };
+          home-manager.users.sidharthify.imports = [ ./home/home.nix ];
 
           home-manager.sharedModules = [
             inputs.nixcord.homeModules.nixcord
@@ -102,16 +78,6 @@
             inherit spicetify-nix lazyvim-nix inputs;
           };
         }
-
-        ({ pkgs, ... }: {
-          environment.systemPackages = [
-            zen-browser-source.packages.${system}.default
-            syd.packages.${system}.default
-            pkgs.parsecgaming
-            tuxManager.packages.${system}.default
-            inputs.balena-etcher.packages.${system}.default
-          ];
-        })
       ];
     };
   };

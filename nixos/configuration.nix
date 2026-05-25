@@ -22,6 +22,7 @@
     ./system/overlays.nix
     ./system/flake-packages.nix
     ./system/catppuccin.nix
+    ./system/wine.nix
 
     ./services/docker-containers.nix
     ./services/misc.nix

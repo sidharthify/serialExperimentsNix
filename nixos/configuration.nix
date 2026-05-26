@@ -30,6 +30,7 @@
     ./services/steam.nix
     ./services/flatpak.nix
     ./services/tailscale.nix
+    ./services/waydroid.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix

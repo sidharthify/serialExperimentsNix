@@ -13,7 +13,6 @@ pkgs: with pkgs; [
     stow
     nwg-look
     lutris-unwrapped
-    wineWow64Packages.stable
     killall
     pywal
     unzip
@@ -68,7 +67,6 @@ pkgs: with pkgs; [
     anydesk
     tmate-ssh-server
     tmate
-    pipx
     pavucontrol
     file
     erofs-utils
@@ -199,6 +197,5 @@ pkgs: with pkgs; [
   kdePackages.qtwebengine
   chromium
   zapzap
-  rustdesk
   google-chrome
 ]

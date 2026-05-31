@@ -198,4 +198,5 @@ pkgs: with pkgs; [
   chromium
   zapzap
   google-chrome
+  signal-desktop
 ]

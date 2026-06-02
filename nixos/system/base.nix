@@ -70,7 +70,7 @@
   services.ollama = {
     enable = true;
     package = pkgs.ollama-cuda;
-    loadModels = [ "codestral" ];
+    loadModels = [ "qwen2.5-coder:14b" ];
   };
 
 }

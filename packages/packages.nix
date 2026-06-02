@@ -199,4 +199,5 @@ pkgs: with pkgs; [
   zapzap
   google-chrome
   signal-desktop
+  claude-code
 ]

@@ -200,4 +200,5 @@ pkgs: with pkgs; [
   google-chrome
   signal-desktop
   claude-code
+  drawy
 ]

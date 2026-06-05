@@ -15,6 +15,7 @@
     nix-flatpak.url        = "github:gmodena/nix-flatpak";
     parsecgaming.url       = "github:DarthPJB/parsec-gaming-nix";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    omenctl.url            = "github:sidharthify/OmenCtl";
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -47,6 +48,7 @@
     catppuccin,
     aerothemeplasma-nix,
     nix-flatpak,
+    omenctl,
     ...
   }@inputs:
   let
@@ -62,7 +64,7 @@
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
         catppuccin.nixosModules.catppuccin
-
+        omenctl.nixosModules.default
         {
           home-manager.useGlobalPkgs   = true;
           home-manager.useUserPackages = true;

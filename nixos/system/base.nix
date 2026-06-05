@@ -73,4 +73,7 @@
     loadModels = [ "qwen2.5-coder:14b" ];
   };
 
+  # omenctl
+  programs.omenctl.enable = true;
+
 }

@@ -122,7 +122,6 @@ pkgs: with pkgs; [
     cabextract
     nasm
     cmake
-    brave
     # build error - imhex   
     tidal-hifi
     pcsx2

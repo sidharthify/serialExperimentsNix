@@ -28,7 +28,7 @@ pkgs: with pkgs; [
     picom
     gh
     # build error: mgba
-    rpcs3
+    # rpcs3
     haruna
     # build error: tenacity
     gamescope

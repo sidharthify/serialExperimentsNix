@@ -76,8 +76,12 @@ let
           installation_mode = "force_installed";
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ycs-youtube-comment-search/latest.xpi";
         };
-      };
-
+        # ── SponsorBlock ────────────────────────────────────
+        "sponsorBlocker@ajay.app" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+        };
+     };
       # ── Dark Reader managed storage config ──────────────────────────────────
       "3rdparty" = {
         Extensions = {

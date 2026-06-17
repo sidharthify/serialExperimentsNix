@@ -69,11 +69,9 @@
   # ollama
   services.ollama = {
     enable = true;
-    package = pkgs.ollama-cuda;
+    package = pkgs.ollama-rocm;
     loadModels = [ "qwen2.5-coder:14b" ];
   };
 
-  # omenctl
-  programs.omenctl.enable = true;
 
 }

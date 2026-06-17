@@ -11,8 +11,10 @@
       vulkan-loader
       vulkan-validation-layers
       vulkan-tools
-      nvidia-vaapi-driver
+      libva
+      libva-utils
       libvdpau
+      libvdpau-va-gl
       ocl-icd
     ];
 

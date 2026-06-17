@@ -11,4 +11,9 @@
     enable32Bit = true;
   };
 
+  hardware.amdgpu.overdrive.enable = true;
+
+  programs.corectrl.enable = true;
+
+  services.lact.enable = true;
 }

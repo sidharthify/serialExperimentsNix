@@ -7,14 +7,6 @@
   boot.kernelPackages = pkgs.cachyosKernels."linuxPackages-cachyos-latest";
 
   boot.kernelParams = [
-    # this was needed to fix the refresh rate not going over a certain amount
-    # on some monitors in drivers <570, but i keep it as a safeguard because im paranoid.
-    "nvidia-modeset.hdmi_deepcolor=0"
-
-    # the usual
-    "nvidia.NVreg_EnableGpuFirmware=0"
-    "nvidia_drm.modeset=1"
-
     # full kernel preemption for minimum latency
     "preempt=full"
     # avoid perf penalty from split-lock detection traps

@@ -7,7 +7,7 @@
     ./hardware/hardware-configuration.nix
     ./hardware/bluetooth.nix
     ./hardware/intel.nix
-    ./hardware/nvidia.nix
+    ./hardware/amd.nix
     ./hardware/sata.nix
 
     ./system/base.nix

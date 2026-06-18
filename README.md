@@ -8,7 +8,7 @@ yes, the name is a lain reference.
 |---|---|
 | **desktop** | plasma 6, sddm, catppuccin mocha mauve |
 | **kernel** | cachyos kernel (bore + bbr3) |
-| **gpu** | nvidia (open kernel modules) |
+| **gpu** | amd (amdgpu) |
 | **audio** | pipewire + wireplumber |
 | **shell** | fish |
 | **editor** | vscodium (lazyvim) |

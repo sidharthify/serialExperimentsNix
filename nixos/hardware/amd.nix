@@ -13,6 +13,10 @@
 
   hardware.amdgpu.overdrive.enable = true;
 
+  boot.extraModprobeConfig = ''
+    options amdgpu ppfeaturemask=0xffffffff
+  '';
+
   services.lact.enable = true;
 
   services.udev.extraRules = ''

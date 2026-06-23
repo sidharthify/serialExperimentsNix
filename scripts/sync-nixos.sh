@@ -3,7 +3,7 @@ set -e
 
 # definitions
 NIX_DIR="/etc/nixos"
-CMD_REBUILD_NIX=(nh os switch)
+CMD_REBUILD_NIX=(sudo nixos-rebuild switch)
 GIT=(sudo git)
 
 # colors

@@ -8,17 +8,17 @@
 
 let
   wallpaper = pkgs.fetchurl {
-    url    = "https://drive.usercontent.google.com/download?id=1BcmTC8rtFX6M9OaxaiNhF1u0t2GpbSmL&export=download&confirm=t";
-    sha256 = "0ny7393qqbqf54rczyrmy5jyswwi12zrdy7bih2hcq501miqaqky";
-    name   = "nixos-wallpaper-catppuccin-mocha.png";
+    url    = "https://drive.usercontent.google.com/download?id=1IRbUxvppEx2NmRsa9ZiH7-3dcbquueZs&export=download&confirm=t";
+    sha256 = "13bswcccjhnsq4wsmfi9myznf6q3yb1qm90ssiy4p87zymjxvvk8";
+    name   = "johnny-silverhand-cyberpunk-wallpaper.png";
   };
 
-  wallpaperPath = "${config.home.homeDirectory}/Pictures/nixos-wallpaper-catppuccin-mocha.png";
+  wallpaperPath = "${config.home.homeDirectory}/Pictures/johnny-silverhand-cyberpunk-wallpaper.png";
 in
 {
   home.packages = [ pkgs.catppuccin-kde ];
 
-  home.file."Pictures/nixos-wallpaper-catppuccin-mocha.png".source = wallpaper;
+  home.file."Pictures/johnny-silverhand-cyberpunk-wallpaper.png".source = wallpaper;
 
   # ── Plasma config ───────────────────────────────────────────────────────────
   programs.plasma = {

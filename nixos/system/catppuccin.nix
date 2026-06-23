@@ -10,6 +10,7 @@
 
   catppuccin.cursors.enable = false;
   catppuccin.plymouth.enable = true;
+  catppuccin.grub.enable = true;
 
   home-manager.users.sidharthify = {
     catppuccin = {

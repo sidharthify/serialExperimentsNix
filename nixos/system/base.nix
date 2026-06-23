@@ -5,12 +5,19 @@
 
 {
   # bl
-  boot.loader.systemd-boot = {
+  boot.loader.systemd-boot.enable      = false;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout                  = 10;
+
+  boot.loader.grub = {
     enable             = true;
+    devices            = [ "nodev" ];
+    efiSupport         = true;
+    useOSProber        = true;
     configurationLimit = 10;
   };
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout                  = 1;
+
+  time.hardwareClockInLocalTime = true;
 
   boot.plymouth.enable         = true;
   boot.initrd.systemd.enable   = true;

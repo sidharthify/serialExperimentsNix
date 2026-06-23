@@ -112,9 +112,7 @@ in
         cube.enable = false;
       };
       nightLight = {
-        enable = true;
-        mode = "constant";
-        temperature.night = 4000;
+        enable = false;
       };
       titlebarButtons = {
         left  = [ ];

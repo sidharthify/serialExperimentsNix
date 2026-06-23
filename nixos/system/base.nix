@@ -15,6 +15,14 @@
     efiSupport         = true;
     useOSProber        = true;
     configurationLimit = 10;
+    extraEntries = ''
+      menuentry "Windows" --class windows {
+        insmod part_gpt
+        insmod fat
+        search --no-floppy --fs-uuid --set=root 3A4C-ABB8
+        chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+      }
+    '';
   };
 
   time.hardwareClockInLocalTime = true;

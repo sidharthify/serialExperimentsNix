@@ -1,7 +1,7 @@
 # nixos/system/kernel.nix
 # CachyOS kernel
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   boot.kernelPackages = pkgs.cachyosKernels."linuxPackages-cachyos-latest";
@@ -18,8 +18,6 @@
     "nmi_watchdog=0"
     # better single-core boost behavior
     "intel_pstate=active"
-    # unlock all amdgpu power management features (overdrive, profile switching)
-    "amdgpu.ppfeaturemask=0xffffffff"
     # quiet boot
     "quiet" "loglevel=3"
   ];

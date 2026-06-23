@@ -1,6 +1,6 @@
 # nixos/hardware/amd.nix
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   services.xserver.videoDrivers = [ "amdgpu" ];
@@ -12,6 +12,12 @@
   };
 
   hardware.amdgpu.overdrive.enable = true;
+
+  # cachyos kernel injects ppfeaturemask=0xfffd7fff at default priority
+  # mkAfter ensures this comes last on the cmdline, and the kernel uses the last value
+  boot.kernelParams = lib.mkAfter [
+    "amdgpu.ppfeaturemask=0xffffffff"
+  ];
 
   boot.extraModprobeConfig = ''
     options amdgpu ppfeaturemask=0xffffffff

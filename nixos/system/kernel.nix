@@ -18,6 +18,8 @@
     "nmi_watchdog=0"
     # better single-core boost behavior
     "intel_pstate=active"
+    # unlock all amdgpu power management features (overdrive, profile switching)
+    "amdgpu.ppfeaturemask=0xffffffff"
     # quiet boot
     "quiet" "loglevel=3"
   ];

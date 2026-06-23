@@ -13,7 +13,9 @@
 
   hardware.amdgpu.overdrive.enable = true;
 
-  programs.corectrl.enable = true;
-
   services.lact.enable = true;
+
+  services.udev.extraRules = ''
+    ACTION=="add", SUBSYSTEM=="drm", KERNEL=="card[0-9]*", DRIVERS=="amdgpu", RUN+="${pkgs.bash}/bin/bash -c 'echo 1 > /sys/class/drm/%k/device/pp_power_profile_mode'"
+  '';
 }

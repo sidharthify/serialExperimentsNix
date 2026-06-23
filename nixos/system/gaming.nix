@@ -21,8 +21,14 @@
         gpu_device               = 0;
         amd_performance_level    = "high";
       };
+      custom = {
+        start = "echo 1 > /sys/class/drm/card0/device/pp_power_profile_mode";
+        end   = "echo 0 > /sys/class/drm/card0/device/pp_power_profile_mode";
+      };
     };
   };
+
+  environment.systemPackages = [ pkgs.mangohud ];
 
   services.udev.extraRules = ''
     ACTION=="add|change", KERNEL=="nvme[0-9]*",      ATTR{queue/scheduler}="none"

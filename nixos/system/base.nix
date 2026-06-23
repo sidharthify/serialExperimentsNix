@@ -18,8 +18,8 @@
     extraEntries = ''
       menuentry "Windows" --class windows {
         insmod part_gpt
-        insmod fat
-        search --no-floppy --fs-uuid --set=root 3A4C-ABB8
+        insmod ntfs
+        search --no-floppy --fs-uuid --set=root 76BCB568BCB52411
         chainloader /EFI/Microsoft/Boot/bootmgfw.efi
       }
     '';

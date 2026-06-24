@@ -80,13 +80,4 @@
   # auto upgrade
   system.autoUpgrade.enable      = true;
   system.autoUpgrade.allowReboot = true;
-
-  # ollama
-  services.ollama = {
-    enable = true;
-    package = pkgs.ollama-rocm;
-    loadModels = [ "qwen2.5-coder:14b" ];
-  };
-
-
 }

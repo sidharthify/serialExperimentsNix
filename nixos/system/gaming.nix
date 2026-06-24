@@ -18,12 +18,12 @@
       };
       gpu = {
         apply_gpu_optimisations  = "accept-responsibility";
-        gpu_device               = 0;
+        gpu_device               = 1;
         amd_performance_level    = "high";
       };
       custom = {
-        start = "echo 1 > /sys/class/drm/card0/device/pp_power_profile_mode";
-        end   = "echo 0 > /sys/class/drm/card0/device/pp_power_profile_mode";
+        start = "echo 1 > /sys/class/drm/card1/device/pp_power_profile_mode";
+        end   = "echo 0 > /sys/class/drm/card1/device/pp_power_profile_mode";
       };
     };
   };

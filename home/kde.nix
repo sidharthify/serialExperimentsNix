@@ -73,7 +73,7 @@ in
           "org.kde.plasma.pager"
           {
             name = "org.kde.plasma.icontasks";
-            config.General.launchers = lib.concatStringsSep "," [
+            config.General.launchers = [
               "preferred://browser"
               "applications:discord.desktop"
               "applications:steam.desktop"

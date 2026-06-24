@@ -22,6 +22,9 @@
     "quiet" "loglevel=3"
   ];
 
+  # load ntsync module for fast sync in Proton
+  boot.kernelModules = [ "ntsync" ];
+
   # specify performance because it defaults to powersave otherwise
   powerManagement.cpuFreqGovernor = "performance";
 

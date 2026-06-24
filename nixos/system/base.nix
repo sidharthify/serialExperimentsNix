@@ -16,11 +16,11 @@
     useOSProber        = true;
     configurationLimit = 10;
     extraEntries = ''
-      menuentry "Windows" --class windows {
+      menuentry "Bazzite" --class fedora --class linux {
         insmod part_gpt
-        insmod ntfs
-        search --no-floppy --fs-uuid --set=root 76BCB568BCB52411
-        chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+        insmod fat
+        search --no-floppy --fs-uuid --set=root 67AA-D0D8
+        chainloader /EFI/fedora/shimx64.efi
       }
     '';
   };

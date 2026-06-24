@@ -8,7 +8,7 @@
 
   boot.kernelParams = [
     # full kernel preemption for minimum latency
-    "preempt=full"
+    "preempt=voluntary"
     # avoid perf penalty from split-lock detection traps
     "split_lock_detect=off"
     # let DXVK/games opt into huge pages via madvise, not forced system-wide

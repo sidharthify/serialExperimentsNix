@@ -16,6 +16,11 @@
     parsecgaming.url       = "github:DarthPJB/parsec-gaming-nix";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
+    jovian = {
+      url = "github:Jovian-Experiments/Jovian-NixOS";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows      = "nixpkgs";
@@ -47,6 +52,7 @@
     catppuccin,
     aerothemeplasma-nix,
     nix-flatpak,
+    jovian,
     ...
   }@inputs:
   {
@@ -56,6 +62,7 @@
 
       modules = [
         ./nixos/configuration.nix
+        jovian.nixosModules.default
         aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager

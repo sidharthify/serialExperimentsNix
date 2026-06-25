@@ -7,6 +7,7 @@ let
     sudo ${pkgs.coreutils}/bin/mkdir -p /var/lib/sddm
     echo -e "[Last]\nSession=gamescope-wayland.desktop" | sudo ${pkgs.coreutils}/bin/tee /var/lib/sddm/state.conf > /dev/null
     
+    sleep 2
     ${pkgs.libsForQt5.qt5.qttools.bin or pkgs.kdePackages.qttools}/bin/qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout 2>/dev/null \
       || loginctl terminate-user "$USER"
   '';

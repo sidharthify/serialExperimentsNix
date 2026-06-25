@@ -9,7 +9,7 @@
       general = {
         renice          = 10;
         inhibit_screensaver = 1;
-        softrealtime    = "off";
+        softrealtime    = "auto";
         reaper_freq     = 5;
       };
       cpu = {
@@ -19,11 +19,7 @@
       gpu = {
         apply_gpu_optimisations  = "accept-responsibility";
         gpu_device               = 1;
-        amd_performance_level    = "high";
-      };
-      custom = {
-        start = "echo 1 > /sys/class/drm/card1/device/pp_power_profile_mode";
-        end   = "echo 0 > /sys/class/drm/card1/device/pp_power_profile_mode";
+        amd_performance_level    = "auto";
       };
     };
   };

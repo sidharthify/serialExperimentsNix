@@ -13,19 +13,17 @@
 
   hardware.amdgpu.overdrive.enable = true;
 
-  # cachyos kernel injects ppfeaturemask=0xfffd7fff at default priority
-  # mkAfter ensures this comes last on the cmdline, and the kernel uses the last value
+  # match bazzite's ppfeaturemask (0xfff7bfff)
+  # disables PCIe DPM (bit 14) and stutter mode (bit 19)
+  # which cause clock instability on RDNA 4
   boot.kernelParams = lib.mkAfter [
-    "amdgpu.ppfeaturemask=0xffffffff"
+    "amdgpu.ppfeaturemask=0xfff7bfff"
   ];
 
   boot.extraModprobeConfig = ''
-    options amdgpu ppfeaturemask=0xffffffff
+    options amdgpu ppfeaturemask=0xfff7bfff
   '';
 
+  # keep lact for fan control only, but disable its performance level management
   services.lact.enable = true;
-
-  services.udev.extraRules = ''
-    ACTION=="add", SUBSYSTEM=="drm", KERNEL=="card[0-9]*", DRIVERS=="amdgpu", RUN+="${pkgs.bash}/bin/bash -c 'echo 1 > /sys/class/drm/%k/device/pp_power_profile_mode'"
-  '';
 }

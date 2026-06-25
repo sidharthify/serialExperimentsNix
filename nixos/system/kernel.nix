@@ -7,25 +7,17 @@
   boot.kernelPackages = pkgs.cachyosKernels."linuxPackages-cachyos-latest";
 
   boot.kernelParams = [
-    # full kernel preemption for minimum latency
-    "preempt=voluntary"
-    # avoid perf penalty from split-lock detection traps
+    "preempt=full"
     "split_lock_detect=off"
-    # let DXVK/games opt into huge pages via madvise, not forced system-wide
     "transparent_hugepage=madvise"
-    # disable watchdog timers
     "nowatchdog"
     "nmi_watchdog=0"
-    # better single-core boost behavior
     "intel_pstate=active"
-    # quiet boot
     "quiet" "loglevel=3"
   ];
 
-  # load ntsync module for fast sync in Proton
   boot.kernelModules = [ "ntsync" ];
 
-  # specify performance because it defaults to powersave otherwise
   powerManagement.cpuFreqGovernor = "performance";
 
   boot.kernel.sysctl = {
@@ -42,5 +34,5 @@
     "kernel.kptr_restrict"           = 0;
   };
 
- services.power-profiles-daemon.enable = false;
+  services.power-profiles-daemon.enable = false;
 }

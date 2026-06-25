@@ -6,7 +6,7 @@ let
   switchToGamingMode = pkgs.writeShellScriptBin "switch-to-gaming-mode" ''
     # set gamescope as the next session for SDDM
     sudo ${pkgs.coreutils}/bin/mkdir -p /var/lib/sddm
-    echo -e "[Last]\nSession=gamescope-wayland.desktop" | sudo ${pkgs.coreutils}/bin/tee /var/lib/sddm/state.conf > /dev/null
+    echo -e "[Last]\nSession=steam.desktop" | sudo ${pkgs.coreutils}/bin/tee /var/lib/sddm/state.conf > /dev/null
     # log out of KDE
     ${pkgs.libsForQt5.qt5.qttools.bin or pkgs.kdePackages.qttools}/bin/qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout 2>/dev/null \
       || loginctl terminate-user "$USER"
@@ -40,7 +40,7 @@ in
 
   programs.gamescope = {
     enable = true;
-    capSysNice = true;
+    capSysNice = false;
   };
 
   environment.systemPackages = [

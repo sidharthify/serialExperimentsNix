@@ -201,4 +201,7 @@ pkgs: with pkgs; [
   claude-code
   drawy
   antigravity-cli
+  ninja
+  pkg-config-unwrapped
+  perl
 ]

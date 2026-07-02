@@ -200,4 +200,5 @@ pkgs: with pkgs; [
   signal-desktop
   claude-code
   drawy
+  antigravity-cli
 ]

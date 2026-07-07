@@ -16,7 +16,7 @@
   # zerotier
   services.zerotierone = {
     enable       = true;
-    joinNetworks = [ "af415e486fbdfe2b" ];
+    joinNetworks = [ "af415e486fbdfe2b" "8850338390eb9eaa" ];
   };
 
   # orca

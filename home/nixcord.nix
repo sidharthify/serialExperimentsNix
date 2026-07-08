@@ -39,7 +39,6 @@
         fixYoutubeEmbeds.enable = true;
         forceOwnerCrown.enable = true;
         friendInvites.enable = true;
-        friendsSince.enable = true;
         whoReacted.enable = true;
         volumeBooster.enable = true;
         voiceDownload.enable = true;

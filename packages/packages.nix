@@ -204,4 +204,5 @@ pkgs: with pkgs; [
   ninja
   pkg-config-unwrapped
   perl
+  rustdesk
 ]

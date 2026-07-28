@@ -205,5 +205,5 @@ pkgs: with pkgs; [
   pkg-config-unwrapped
   perl
   rustdesk
-  proton-vpn
+  protonvpn-gui
 ]

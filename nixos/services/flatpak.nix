@@ -23,7 +23,6 @@
     "org.gnome.baobab"
     "dev.khcrysalis.PlumeImpactor"
     "com.heroicgameslauncher.hgl"
-    "com.protonvpn.www"
     "net.shadps4.shadPS4"
   ];
 

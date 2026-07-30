@@ -60,8 +60,8 @@
   zramSwap = {
     enable        = true;
     algorithm     = "zstd";
-    memoryPercent = 70;
-    priority      = 100;    # always hit ZRAM before the 64GB swapfile
+    memoryPercent = 100;
+    priority      = 100;    # always hit ZRAM before the 16GB swapfile
   };
 
   # openssh

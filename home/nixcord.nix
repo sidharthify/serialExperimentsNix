@@ -33,7 +33,6 @@
         expressionCloner.enable = true;
         fakeNitro.enable = true;
         favoriteEmojiFirst.enable = true;
-        favoriteGifSearch.enable = true;
         fixCodeblockGap.enable = true;
         fixImagesQuality.enable = true;
         fixSpotifyEmbeds.enable = true;
@@ -64,7 +63,6 @@
         noBlockedMessages.enable = true;
         messageLogger.enable = true;
         memberCount.enable = true;
-        lastFmRichPresence.enable = true;
         implicitRelationships.enable = true;
         imageZoom.enable = true;
         imageLink.enable = true;

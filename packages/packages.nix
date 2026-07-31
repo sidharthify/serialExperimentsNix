@@ -182,7 +182,11 @@ pkgs: with pkgs; [
   microsoft-edge
   steamcmd
   screen
-  steam-run
+  # steam-run FHS with the extra libs BeamNG's native build (CEF/GTK) needs;
+  # steam-run's own override can't take extraPkgs, so override `steam` and take `.run`.
+  ((steam.override {
+    extraPkgs = pkgs: with pkgs; [ at-spi2-core libxcomposite nss nspr ];
+  }).run)
   tigervnc
   rdesktop
   epy

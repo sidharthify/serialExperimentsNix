@@ -8,6 +8,7 @@
     ./spicetify.nix
     ./vscodium.nix
     ./eldenring.nix
+    ./beamng.nix
     ./zen.nix
     ./kde.nix
   ];

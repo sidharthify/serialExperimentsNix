@@ -206,4 +206,5 @@ pkgs: with pkgs; [
   perl
   rustdesk
   protonvpn-gui
+  kdePackages.krecorder
 ]

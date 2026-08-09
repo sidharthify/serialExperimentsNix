@@ -38,7 +38,6 @@ in
       general = {
         family = "Inter";
         pointSize = 10;
-        weight = "medium";
       };
       fixedWidth = {
         family = "Hack";
@@ -47,17 +46,14 @@ in
       menu = {
         family = "Inter";
         pointSize = 10;
-        weight = "medium";
       };
       toolbar = {
         family = "Inter";
         pointSize = 10;
-        weight = "medium";
       };
       small = {
         family = "Inter";
         pointSize = 10;
-        weight = "medium";
       };
       windowTitle = {
         family = "Inter";

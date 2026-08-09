@@ -31,7 +31,6 @@
     ./services/flatpak.nix
     ./services/tailscale.nix
     ./services/waydroid.nix
-    ./services/gpu-passthrough.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix

@@ -195,10 +195,6 @@ in
 
     # ── Raw config ──────────────────────────────────────────────────────────
     configFile = {
-      # 27" 1440p = 109 PPI; pairs with QT_FONT_DPI in nixos/system/fonts.nix
-      # and drives Plasma's GTK sync (gtk-xft-dpi / Xft.dpi for Xwayland apps)
-      kcmfonts.General.forceFontDPI    = 109;
-
       kdeglobals.General.XftAntialias  = true;
       kdeglobals.General.XftHintStyle  = "hintslight";
       kdeglobals.General.XftSubPixel   = "rgb";

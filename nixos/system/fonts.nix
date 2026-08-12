@@ -82,8 +82,6 @@
     };
   };
 
-  environment.sessionVariables.QT_FONT_DPI = "109";
-
   environment.variables = {
     FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0 type1:no-stem-darkening=0 t1cid:no-stem-darkening=0";
   };

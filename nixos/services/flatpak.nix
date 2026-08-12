@@ -17,7 +17,7 @@
   services.flatpak.packages = [
     "io.github.brunofin.Cohesion"
     "org.kde.kclock"
-    "org.vinegarhq.Sober"
+   # "org.vinegarhq.Sober"
     "io.github.ronniedroid.concessio"
     "net.audiorelay.AudioRelay"
     "org.gnome.baobab"

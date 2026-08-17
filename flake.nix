@@ -13,7 +13,6 @@
     lazyvim-nix.url        = "github:jla2000/lazyvim-nix";
     syd.url                = "github:sidharthify/syd";
     nix-flatpak.url        = "github:gmodena/nix-flatpak";
-    parsecgaming.url       = "github:DarthPJB/parsec-gaming-nix";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     plasma-manager = {
@@ -22,19 +21,7 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    catppuccin.url    = "github:catppuccin/nix";
-    millennium.url    = "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
-    balena-etcher.url = "github:sidharthify/balenaEtcher-flake";
-
-    tuxManager = {
-      url = "github:sidharthify/TuxManager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    aerothemeplasma-nix = {
-      url = "github:nyakase/aerothemeplasma-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = {
@@ -45,7 +32,6 @@
     lazyvim-nix,
     plasma-manager,
     catppuccin,
-    aerothemeplasma-nix,
     nix-flatpak,
     ...
   }@inputs:
@@ -56,7 +42,6 @@
 
       modules = [
         ./nixos/configuration.nix
-        aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
         nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
         catppuccin.nixosModules.catppuccin

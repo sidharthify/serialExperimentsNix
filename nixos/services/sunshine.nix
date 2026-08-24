@@ -7,8 +7,8 @@ let
   kscreen = "${pkgs.kdePackages.libkscreen}/bin/kscreen-doctor";
   steam   = "/run/current-system/sw/bin/steam";
 
-  # drop the G255F from 185Hz to 144Hz while streaming so host refresh,
-  # encode rate and the pad's 144Hz panel are all 1:1 — no cadence judder
+  # drop the monitor from 185Hz to 144Hz while streaming so host refresh,
+  # encode rate and the pad's 144Hz panel are all the same
   streamMode  = "2560x1440@144";
   desktopMode = "2560x1440@185";
 
@@ -25,14 +25,11 @@ in
       sunshine_name = "nixos";
 
       # --- capture / encode -------------------------------------------------
-      # kwin = native plasma 6 wayland screencast (zkde_screencast_unstable_v1).
-      # fall back to "kms" (needs capSysAdmin, already on) if kwingrab misbehaves.
       capture      = "kwin";
       encoder      = "vaapi";
       adapter_name = "/dev/dri/renderD128";
 
       # rdna4 vcn encodes h264 / hevc main+main10 / av1 profile0.
-      # advertise hevc; leave av1 on auto so the client takes it if it wants.
       hevc_mode = 2;
       av1_mode  = 0;
 
@@ -40,7 +37,6 @@ in
       gamepad = "auto";  # ds5 for the real dualsense, x360 for on-screen controls
 
       # --- state ------------------------------------------------------------
-      # relative paths resolve next to the config file, which lives in
       # /nix/store and is read-only. pin them at a writable location.
       credentials_file = "${stateDir}/sunshine_state.json";
       file_state       = "${stateDir}/sunshine_state.json";

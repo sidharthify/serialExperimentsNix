@@ -9,7 +9,7 @@
 
   # MTU 1372 for Jio 5G — set via NM connection override
   networking.networkmanager.connectionConfig = {
-    "ethernet.mtu" = 1372;
+    "ethernet.mtu" = 1500;
     "wifi.mtu" = 1372;
   };
 

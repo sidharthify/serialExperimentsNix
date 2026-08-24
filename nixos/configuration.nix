@@ -32,6 +32,7 @@
     ./services/flatpak.nix
     ./services/tailscale.nix
     ./services/waydroid.nix
+    ./services/sunshine.nix
     ./services/libvirt.nix
 
     ./users/fish.nix

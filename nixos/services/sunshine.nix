@@ -37,7 +37,7 @@ in
       av1_mode  = 0;
 
       # --- input ------------------------------------------------------------
-      gamepad = "ds5";  # dualsense passthrough -> playstation button prompts
+      gamepad = "auto";  # ds5 for the real dualsense, x360 for on-screen controls
 
       # --- state ------------------------------------------------------------
       # relative paths resolve next to the config file, which lives in

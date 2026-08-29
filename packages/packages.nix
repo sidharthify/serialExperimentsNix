@@ -19,7 +19,6 @@ pkgs: with pkgs; [
     unrar
     catppuccin-gtk
     protonup-qt
-    obs-studio
     mangohud
     w3m
     imagemagick

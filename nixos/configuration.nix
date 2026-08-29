@@ -24,6 +24,7 @@
     ./system/catppuccin.nix
     ./system/wine.nix
     ./system/aula-f75.nix
+    ./system/obs.nix
 
     ./services/docker-containers.nix
     ./services/misc.nix

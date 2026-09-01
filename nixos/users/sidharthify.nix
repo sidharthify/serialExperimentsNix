@@ -11,7 +11,6 @@
       "wheel"
       "libvirtd"
       "dialout"
-      "docker"
       "audio"
       "input"
     ];

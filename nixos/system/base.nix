@@ -15,14 +15,6 @@
     efiSupport         = true;
     useOSProber        = true;
     configurationLimit = 10;
-    extraEntries = ''
-      menuentry "Bazzite" --class fedora --class linux {
-        insmod part_gpt
-        insmod fat
-        search --no-floppy --fs-uuid --set=root 67AA-D0D8
-        chainloader /EFI/fedora/shimx64.efi
-      }
-    '';
   };
 
   time.hardwareClockInLocalTime = true;

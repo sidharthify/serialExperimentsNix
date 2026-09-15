@@ -21,6 +21,8 @@
     ./system/gaming.nix
     ./system/overlays.nix
     ./system/flake-packages.nix
+    ./system/zen-codecs-fix.nix
+    ./system/zen-codecs-fix.nix
     ./system/catppuccin.nix
     ./system/wine.nix
     ./system/aula-f75.nix

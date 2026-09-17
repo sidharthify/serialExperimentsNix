@@ -36,10 +36,10 @@
     ./services/waydroid.nix
     ./services/sunshine.nix
     ./services/libvirt.nix
+    ./services/satisfactory.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix
-    ./users/arkserver.nix
   ];
 
   environment.systemPackages = import ../packages/packages.nix pkgs;

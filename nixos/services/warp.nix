@@ -16,7 +16,7 @@
 
     peers = [{
       publicKey = "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=";
-      endpoint = "162.159.192.1:2408"; # engage.cloudflareclient.com
+      endpoint = "162.159.193.10:2408"; # engage.cloudflareclient.com
       persistentKeepalive = 25;
 
       # Valve (AS32590) — Steam Datagram Relay POPs used by CS2

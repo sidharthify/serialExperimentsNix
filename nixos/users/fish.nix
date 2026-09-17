@@ -11,6 +11,7 @@ in
     shellAliases = {
       ll = "ls ${d}l";
       fuckoff = "shutdown now";
+      "satisfactory${d}log" = "journalctl ${d}u satisfactory ${d}f";
       "mic${d}loopback" = "pw${d}loopback ${d}${d}capture${d}props=node.name=MicLoopback ${d}${d}playback${d}props=node.target=51";
     };
 

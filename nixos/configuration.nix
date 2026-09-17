@@ -15,13 +15,13 @@
     ./system/fonts.nix
     ./system/kernel.nix
     ./system/networking.nix
+    ./system/net-tune.nix
     ./system/opengl.nix
     ./system/nix-settings.nix
     ./system/android-dev.nix
     ./system/gaming.nix
     ./system/overlays.nix
     ./system/flake-packages.nix
-    ./system/zen-codecs-fix.nix
     ./system/zen-codecs-fix.nix
     ./system/catppuccin.nix
     ./system/wine.nix

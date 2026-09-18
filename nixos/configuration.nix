@@ -39,7 +39,6 @@
     ./services/minecraft-prodigium.nix
     ./services/minecraft-ddns.nix
     ./services/playit.nix
-    ./services/router-openwrt.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix

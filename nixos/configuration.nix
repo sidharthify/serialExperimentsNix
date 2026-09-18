@@ -36,6 +36,10 @@
     ./services/waydroid.nix
     ./services/sunshine.nix
     ./services/libvirt.nix
+    ./services/minecraft-prodigium.nix
+    ./services/minecraft-ddns.nix
+    ./services/playit.nix
+    ./services/router-openwrt.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix

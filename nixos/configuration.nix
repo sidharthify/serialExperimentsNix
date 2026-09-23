@@ -11,6 +11,7 @@
     ./hardware/sata.nix
 
     ./system/base.nix
+    ./system/secureboot.nix
     ./system/desktop.nix
     ./system/fonts.nix
     ./system/kernel.nix
@@ -39,6 +40,8 @@
     ./services/minecraft-prodigium.nix
     ./services/minecraft-ddns.nix
     ./services/playit.nix
+    ./services/minecraft-backup-archive.nix
+    ./services/mc-discord-bot.nix
 
     ./users/fish.nix
     ./users/sidharthify.nix

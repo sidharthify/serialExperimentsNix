@@ -11,7 +11,6 @@
     ./hardware/sata.nix
 
     ./system/base.nix
-    ./system/secureboot.nix
     ./system/desktop.nix
     ./system/fonts.nix
     ./system/kernel.nix

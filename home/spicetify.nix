@@ -22,7 +22,6 @@ in
       adblockify
       hidePodcasts
       shuffle
-      betterGenres
       simpleBeautifulLyrics
     ];
     experimentalFeatures = true;

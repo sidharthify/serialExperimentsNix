@@ -55,7 +55,6 @@
         silentTyping.enable = true;
         showHiddenChannels.enable = true;
         serverInfo.enable = true;
-        summaries.enable = true;
         roleColorEverywhere.enable = true;
         reverseImageSearch.enable = true;
         relationshipNotifier.enable = true;
@@ -86,6 +85,7 @@
         spotifyControls.enable = true;
         userVoiceShow.enable = true;
         reviewDb.enable = true;
+        addAttachments.enable = true;
       };
     };
   };

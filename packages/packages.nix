@@ -64,8 +64,6 @@ pkgs: with pkgs; [
     nss
     fastfetch
     anydesk
-    tmate-ssh-server
-    tmate
     pavucontrol
     file
     erofs-utils

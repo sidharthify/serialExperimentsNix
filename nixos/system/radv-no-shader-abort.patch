@@ -1,0 +1,20 @@
+--- a/src/amd/vulkan/radv_physical_device.c
++++ b/src/amd/vulkan/radv_physical_device.c
+@@ -777,7 +777,7 @@
+       .KHR_sampler_mirror_clamp_to_edge = true,
+       .KHR_sampler_ycbcr_conversion = true,
+       .KHR_separate_depth_stencil_layouts = true,
+-      .KHR_shader_abort = true,
++      .KHR_shader_abort = false, /* CS2: shaderAbort disables the pipeline cache (csgo-osx-linux#4624) */
+       .KHR_shader_atomic_int64 = true,
+       .KHR_shader_bfloat16 = radv_bfloat16_enabled(pdev),
+       .KHR_shader_clock = true,
+@@ -1675,7 +1675,7 @@
+       .deviceFaultDeviceLostOnMasked = false,
+ 
+       /* VK_KHR_shader_abort */
+-      .shaderAbort = true,
++      .shaderAbort = false,
+ 
+       /* VK_EXT_shader_split_barrier */
+       .shaderSplitBarrier = radv_split_barrier_enabled(pdev),

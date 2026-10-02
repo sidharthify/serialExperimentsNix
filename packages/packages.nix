@@ -200,7 +200,6 @@ pkgs: with pkgs; [
   ninja
   pkg-config-unwrapped
   perl
-  rustdesk
   protonvpn-gui
   kdePackages.krecorder
 ]

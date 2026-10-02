@@ -2,6 +2,7 @@
 #
 # Force-installs all Zen extensions via Firefox Policies.
 # Dark Reader is also configured via managed storage.
+# Font prefs (user.js) and chrome/userContent.css are managed here too.
 # Zen themes are browser themes, and those are managed through the Zen UI and don't need declarative installation.
 
 { config, pkgs, lib, ... }:
@@ -102,8 +103,26 @@ let
       };
     };
   };
+
+  # The actual profile directory (Zen creates it with a random prefix).
+  zenProfile = ".zen/map2mxlp.Default Profile";
 in
 {
+  # Prefs re-applied on every Zen startup; about:config changes to these only
+  # last until the next restart.
+  home.file."${zenProfile}/user.js".text = ''
+    user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+    // Document fonts stay ON; userContent.css forces Inter instead, so ligature
+    // icon fonts (Gemini's mat-icons) still render instead of showing as text.
+    user_pref("browser.display.use_document_fonts", 1);
+    user_pref("font.name.sans-serif.x-western", "Inter Variable");
+    user_pref("font.name.serif.x-western", "Inter Display");
+    user_pref("font.name.monospace.x-western", "JetBrains Mono");
+  '';
+
+  # Catppuccin Mocha for about: pages + global Inter forcing (minus icon fonts).
+  home.file."${zenProfile}/chrome/userContent.css".source = ./zen-userContent.css;
+
   # Place policies.json in the Zen profile's distribution/ directory.
   home.file.".zen/distribution/policies.json" = {
     text = builtins.toJSON zenPolicies;

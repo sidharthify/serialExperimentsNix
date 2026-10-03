@@ -19,12 +19,42 @@
       gpu = {
         apply_gpu_optimisations  = "accept-responsibility";
         gpu_device               = 1;
-        amd_performance_level    = "auto";
+        # pin GPU clocks while gaming instead of ramping per load
+        amd_performance_level    = "high";
+      };
+      # keep CPUs out of C6/C8/C10 (220-680us wake-up) while a game runs
+      custom = {
+        start = "${pkgs.systemd}/bin/systemctl start cpu-lowlatency.service";
+        end   = "${pkgs.systemd}/bin/systemctl stop cpu-lowlatency.service";
       };
     };
   };
 
-  environment.systemPackages = [ pkgs.mangohud ];
+  # Holds a PM QoS request of 2us on /dev/cpu_dma_latency. only POLL and C1E
+  # (2us exit) stay allowed. The request lasts exactly as long as the fd is
+  # open, so stopping the unit restores normal idle.
+  systemd.services.cpu-lowlatency = {
+    description = "Block deep CPU C-states while gaming";
+    serviceConfig.ExecStart = pkgs.writeShellScript "cpu-lowlatency" ''
+      exec 3>/dev/cpu_dma_latency
+      printf '\x02\x00\x00\x00' >&3
+      exec ${pkgs.coreutils}/bin/sleep infinity
+    '';
+  };
+
+  # let wheel users (gamemode runs custom scripts as the user) toggle it
+  security.polkit.extraConfig = ''
+    polkit.addRule(function(action, subject) {
+      if (action.id == "org.freedesktop.systemd1.manage-units" &&
+          action.lookup("unit") == "cpu-lowlatency.service" &&
+          subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+      }
+    });
+  '';
+
+  # scx_full for A/B testing sched_ext schedulers, e.g. `sudo scx_lavd --performance`
+  environment.systemPackages = [ pkgs.mangohud pkgs.scx.full ];
 
   # match bazzite's mesa/vulkan/proton environment
   environment.sessionVariables = {

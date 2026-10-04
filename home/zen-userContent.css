@@ -156,15 +156,3 @@
     }
   }
 }
-
-@-moz-document url-prefix("http://"), url-prefix("https://") {
-  body, input, textarea, select, button {
-    font-family: "Inter Variable", "Inter", sans-serif;
-  }
-
-  code, pre, kbd, samp, tt,
-  [class*="blob-code"], [class*="react-code"],
-  .monaco-editor, .cm-editor {
-    font-family: "JetBrains Mono", monospace !important;
-  }
-}

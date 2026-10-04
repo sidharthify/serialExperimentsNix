@@ -132,6 +132,7 @@ in
 
       extensions.force = true;
 
+      userChrome = builtins.readFile ./firefox-userChrome.css;
       userContent = builtins.readFile ./firefox-userContent.css;
 
       settings = {

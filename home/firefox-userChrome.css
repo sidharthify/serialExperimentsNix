@@ -1,0 +1,59 @@
+/* Catppuccin Mocha Mauve userChrome.css for Firefox */
+
+:root {
+  --toolbar-bgcolor: #1e1e2e !important;
+  --toolbar-color: #cdd6f4 !important;
+  --toolbarbutton-icon-fill: #cba6f7 !important;
+  --lwt-text-color: #cdd6f4 !important;
+  --toolbar-field-background-color: #313244 !important;
+  --toolbar-field-color: #cdd6f4 !important;
+  --toolbar-field-focus-background-color: #313244 !important;
+  --toolbar-field-focus-color: #cdd6f4 !important;
+  --tab-selected-bgcolor: #313244 !important;
+  --tab-selected-textcolor: #cba6f7 !important;
+  --arrowpanel-background: #1e1e2e !important;
+  --arrowpanel-color: #cdd6f4 !important;
+  --arrowpanel-border-color: #313244 !important;
+  --autocomplete-popup-background: #1e1e2e !important;
+  --autocomplete-popup-color: #cdd6f4 !important;
+  --lwt-sidebar-background-color: #181825 !important;
+  --lwt-sidebar-text-color: #cdd6f4 !important;
+}
+
+#TabsToolbar {
+  background-color: #181825 !important;
+}
+
+#nav-bar {
+  background-color: #1e1e2e !important;
+  box-shadow: none !important;
+}
+
+#urlbar-background {
+  background-color: #313244 !important;
+  border: 1px solid #45475a !important;
+}
+
+#urlbar[focused="true"] > #urlbar-background {
+  border-color: #cba6f7 !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #313244 !important;
+  border-top: 2px solid #cba6f7 !important;
+}
+
+menupopup, panel {
+  --panel-background: #1e1e2e !important;
+  --panel-color: #cdd6f4 !important;
+  --panel-border-color: #313244 !important;
+}
+
+menu, menuitem {
+  color: #cdd6f4 !important;
+}
+
+menu:hover, menuitem:hover, menu[_moz-menuactive="true"], menuitem[_moz-menuactive="true"] {
+  background-color: #313244 !important;
+  color: #cba6f7 !important;
+}

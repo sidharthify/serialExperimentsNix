@@ -206,7 +206,7 @@ in
       kdeglobals.WM.inactiveBackground = "17,17,27";
       kdeglobals.WM.inactiveBlend      = "166,173,200";
       kdeglobals.WM.inactiveForeground = "166,173,200";
-      kdeglobals.General.BrowserApplication     = "google-chrome.desktop";
+      kdeglobals.General.BrowserApplication     = "firefox.desktop";
       kdeglobals.General.DeviceLedsAccentColored = false;
       kdeglobals."KFileDialog Settings"."Breadcrumb Navigation"  = true;
       kdeglobals."KFileDialog Settings"."Sort directories first" = true;

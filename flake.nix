@@ -8,7 +8,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     spicetify-nix.url      = "github:Gerg-L/spicetify-nix";
-    zen-browser-source.url = "github:youwen5/zen-browser-flake";
     nixcord.url            = "github:KaylorBen/nixcord";
     lazyvim-nix.url        = "github:jla2000/lazyvim-nix";
     syd.url                = "github:sidharthify/syd";
@@ -48,6 +47,7 @@
         {
           home-manager.useGlobalPkgs   = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
 
           home-manager.users.sidharthify.imports = [ ./home/home.nix ];
 

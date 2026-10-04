@@ -115,9 +115,6 @@ in
   home.file."${zenProfile}/user.js".text = ''
     user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
     user_pref("browser.display.use_document_fonts", 1);
-    user_pref("font.name.sans-serif.x-western", "Inter Variable");
-    user_pref("font.name.serif.x-western", "Inter Display");
-    user_pref("font.name.monospace.x-western", "JetBrains Mono");
 
     user_pref("gfx.webrender.all", true);
     user_pref("media.ffmpeg.vaapi.enabled", true);
@@ -130,7 +127,7 @@ in
     user_pref("general.smoothScroll.msdPhysics.enabled", true);
   '';
 
-  # Catppuccin Mocha for about: pages + global Inter forcing (minus icon fonts).
+  # Catppuccin Mocha for about: pages.
   home.file."${zenProfile}/chrome/userContent.css".source = ./zen-userContent.css;
 
   # Place policies.json in the Zen profile's distribution/ directory.

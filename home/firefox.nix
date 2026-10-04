@@ -1,12 +1,25 @@
 # home/firefox.nix
 #
 # Configures Firefox declaratively with policy extensions, Dark Reader,
-# Catppuccin Mocha Mauve, hardware acceleration, and smooth scrolling.
+# Catppuccin Mocha Mauve, hardware acceleration, smooth scrolling,
+# clean homepage, anti-tracking, and telemetry disabling.
 
 { config, pkgs, lib, ... }:
 
 let
   firefoxPolicies = {
+    DisableTelemetry = true;
+    DisableFirefoxStudies = true;
+    DisablePocket = true;
+    DisableFeedbackCommands = true;
+    EnableTrackingProtection = {
+      Value = true;
+      Locked = true;
+      Cryptomining = true;
+      Fingerprinting = true;
+      EmailTracking = true;
+    };
+
     ExtensionSettings = {
       # Bring Twitter Back
       "{1af1a448-95f4-46c6-b093-078ea1023f81}" = {
@@ -148,12 +161,54 @@ in
         "general.smoothScroll.scrollbars.durationMinMS" = 125;
         "mousewheel.default.delta_multiplier_y" = 100;
 
-        # ui and clean defaults
+        # clean home page and zero ads / sponsored content
         "browser.compactmode.show" = true;
         "browser.tabs.firefox-view" = false;
         "browser.newtabpage.activity-stream.feeds.topsites" = true;
+        "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+        "browser.newtabpage.activity-stream.feeds.snippets" = false;
         "browser.newtabpage.activity-stream.showSponsored" = false;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+        "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
+        "extensions.pocket.enabled" = false;
+        "browser.urlbar.suggest.quicksuggest.sponsored" = false;
+        "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
+        "browser.urlbar.quicksuggest.enabled" = false;
+        "browser.urlbar.sponsoredTopSites" = false;
+
+        # tracker protection and cookie isolation (total cookie protection)
+        "privacy.trackingprotection.enabled" = true;
+        "privacy.trackingprotection.socialtracking.enabled" = true;
+        "privacy.trackingprotection.cryptomining.enabled" = true;
+        "privacy.trackingprotection.fingerprinting.enabled" = true;
+        "privacy.trackingprotection.emailtracking.enabled" = true;
+        "privacy.query_stripping.enabled" = true;
+        "privacy.query_stripping.enabled.pbmode" = true;
+        "network.cookie.cookieBehavior" = 5;
+        "privacy.partition.network_state" = true;
+
+        # disable tracking pings and prefetching
+        "browser.send_pings" = false;
+        "beacon.enabled" = false;
+        "dom.battery.enabled" = false;
+        "network.prefetch-next" = false;
+        "network.dns.disablePrefetch" = true;
+        "network.http.speculative-parallel-limit" = 0;
+
+        # telemetry and crash reporting
+        "toolkit.telemetry.enabled" = false;
+        "toolkit.telemetry.unified" = false;
+        "toolkit.telemetry.archive.enabled" = false;
+        "experiments.activeExperiment" = false;
+        "experiments.supported" = false;
+        "network.allow-experiments" = false;
+        "breakpad.reportURL" = "";
+        "browser.tabs.crashReporting.sendReport" = false;
+        "browser.crashReports.unsubmittedCheck.autoSubmit2" = false;
+
+        # media compatibility (widevine drm and webrtc stay enabled)
+        "media.eme.enabled" = true;
+        "media.peerconnection.enabled" = true;
       };
     };
   };

@@ -209,6 +209,18 @@ in
         # media compatibility (widevine drm and webrtc stay enabled)
         "media.eme.enabled" = true;
         "media.peerconnection.enabled" = true;
+
+        # prevent gtk theme bleed-through and use clean modern native styling
+        "widget.content.allow-gtk-dark-theme" = false;
+        "widget.non-native-theme.enabled" = true;
+        "widget.non-native-theme.scrollbar.style" = 5;
+        "widget.non-native-theme.gtk.scrollbar.allow-buttons" = false;
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
+        "widget.use-xdg-desktop-portal.mime" = 1;
+        "browser.tabs.inTitlebar" = 1;
+        "browser.theme.content-theme" = 0;
+        "browser.theme.toolbar-theme" = 0;
+        "layout.css.prefers-color-scheme.content-override" = 0;
       };
     };
   };

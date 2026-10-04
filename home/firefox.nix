@@ -178,15 +178,22 @@ in
         "browser.urlbar.sponsoredTopSites" = false;
 
         # tracker protection and cookie isolation (total cookie protection)
+        "browser.contentblocking.category" = "strict";
         "privacy.trackingprotection.enabled" = true;
+        "privacy.trackingprotection.pbmode.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
         "privacy.trackingprotection.cryptomining.enabled" = true;
         "privacy.trackingprotection.fingerprinting.enabled" = true;
         "privacy.trackingprotection.emailtracking.enabled" = true;
+        "privacy.donottrackheader.enabled" = true;
+        "privacy.globalprivacycontrol.enabled" = true;
         "privacy.query_stripping.enabled" = true;
         "privacy.query_stripping.enabled.pbmode" = true;
+        "privacy.bounceTrackingProtection.mode" = 1;
         "network.cookie.cookieBehavior" = 5;
         "privacy.partition.network_state" = true;
+        "dom.security.https_only_mode" = true;
+        "network.http.referer.XOriginTrimmingPolicy" = 2;
 
         # disable tracking pings and prefetching
         "browser.send_pings" = false;

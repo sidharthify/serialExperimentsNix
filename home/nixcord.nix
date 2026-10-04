@@ -5,6 +5,9 @@
     enable = true;
     discord.vencord.enable = true;
     discord.openASAR.enable = true;
+    discord.settings = {
+      enableHardwareAcceleration = false;
+    };
     config = {
       useQuickCss = true;
       themeLinks = [

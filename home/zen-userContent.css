@@ -157,19 +157,22 @@
   }
 }
 
-/* ── Force Inter on websites, but leave icon fonts and code alone ───────────
- * Needs browser.display.use_document_fonts = 1 (set in user.js by zen.nix).
- * With it at 0, ligature icon fonts (Gemini's Google Symbols / mat-icon) show
- * as raw text like "menu_open", because Inter has those letters too. */
-@-moz-document regexp("https?://.*") {
-  *:not(mat-icon, .mat-ligature-font, .google-symbols,
-        .material-icons, .material-icons-outlined, .material-icons-round,
-        .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp,
-        [class*="fa-"], [class^="fa "], [class*="icon" i], [class*="symbol" i],
-        i, svg, svg *, code, pre, kbd, samp, tt) {
+@-moz-document url-prefix("http://"), url-prefix("https://") {
+  html, body,
+  h1, h2, h3, h4, h5, h6,
+  p, li, blockquote, dt, dd, th, td,
+  button, input, textarea, select {
     font-family: "Inter Variable", "Inter", sans-serif !important;
   }
-  code, pre, kbd, samp, tt {
+
+  code, pre, kbd, samp, tt,
+  [class*="blob-code"], [class*="react-code"],
+  .monaco-editor, .cm-editor {
     font-family: "JetBrains Mono", monospace !important;
+  }
+
+  code *, pre *, kbd *, samp *, tt *,
+  [class*="blob-code"] *, [class*="react-code"] * {
+    font-family: inherit !important;
   }
 }

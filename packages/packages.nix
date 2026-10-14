@@ -202,4 +202,5 @@ pkgs: with pkgs; [
   perl
   protonvpn-gui
   kdePackages.krecorder
+  opencode
 ]

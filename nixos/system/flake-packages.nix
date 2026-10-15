@@ -2,6 +2,6 @@
 
 {
   environment.systemPackages = [
-    inputs.syd.packages.${pkgs.system}.default
+    inputs.syd.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

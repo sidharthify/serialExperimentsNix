@@ -125,7 +125,7 @@ pkgs: with pkgs; [
     affine
     vlc
     freerdp
-    libreoffice-qt6-fresh
+    libreoffice-qt
     aria2
     discord
   font-awesome
@@ -154,13 +154,12 @@ pkgs: with pkgs; [
   apksigner
   vscode
   jdk17
-  antigravity
+  antigravity-ide
   distrobox
   rclone
   glow
   # marktext
   media-downloader
-  gemini-cli
   go
   appimage-run
   wails
@@ -200,7 +199,7 @@ pkgs: with pkgs; [
   ninja
   pkg-config-unwrapped
   perl
-  protonvpn-gui
+  proton-vpn
   kdePackages.krecorder
   opencode
 ]

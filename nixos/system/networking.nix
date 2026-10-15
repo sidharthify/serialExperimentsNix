@@ -1,6 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+
+  imports = [ inputs.net-merge.nixosModules.default ];
+
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
@@ -46,4 +49,11 @@
 
   # Load required modules for BBR
   boot.kernelModules = [ "tcp_bbr" ];
+
+  # net-merge
+  programs.net-merge = {
+    enable = true;
+    extraArgs = [ "-ipv6" "on" ];
+  };
+
 }

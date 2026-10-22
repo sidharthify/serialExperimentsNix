@@ -14,14 +14,12 @@ pkgs: with pkgs; [
     nwg-look
     lutris-unwrapped
     killall
-    pywal
     unzip
     unrar
     catppuccin-gtk
     protonup-qt
     mangohud
     w3m
-    imagemagick
     networkmanager
     networkmanager_dmenu
     picom

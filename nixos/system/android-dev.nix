@@ -32,7 +32,6 @@ let
       gnumake
       gnupg
       gperf
-      imagemagick
       jdk17
       elfutils
       libxml2

@@ -13,7 +13,6 @@
     syd.url                = "github:sidharthify/syd";
     nix-flatpak.url        = "github:gmodena/nix-flatpak";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
-    net-merge.url          = "github:sidharthify/net-merge";
 
     plasma-manager = {
       url = "github:nix-community/plasma-manager";

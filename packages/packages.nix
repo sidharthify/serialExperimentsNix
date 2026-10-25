@@ -200,4 +200,6 @@ pkgs: with pkgs; [
   proton-vpn
   kdePackages.krecorder
   opencode
+  # syd
+  audacity
 ]

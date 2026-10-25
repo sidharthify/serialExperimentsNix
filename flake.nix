@@ -21,6 +21,12 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
+
+    # local checkout until it's pushed; switch to github:sidharthify/beamng-fsr4-linux-nix then
+    bng-fsr4 = {
+      url = "git+file:///home/sidharthify/beamng-fsr4-linux-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

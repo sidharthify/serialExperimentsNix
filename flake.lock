@@ -16,6 +16,26 @@
         "type": "github"
       }
     },
+    "bng-fsr4": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792962036,
+        "narHash": "sha256-EQ23BrcMbeuQbT1qKt98Hh0kmXPsUeBFaYWG0LQ6Lf8=",
+        "ref": "refs/heads/main",
+        "rev": "d123a2b52a551df0ee68e2f98fa5cb00932b83c7",
+        "revCount": 2,
+        "type": "git",
+        "url": "file:///home/sidharthify/beamng-fsr4-linux-nix"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/sidharthify/beamng-fsr4-linux-nix"
+      }
+    },
     "catppuccin": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -495,6 +515,7 @@
     },
     "root": {
       "inputs": {
+        "bng-fsr4": "bng-fsr4",
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
         "lazyvim-nix": "lazyvim-nix",

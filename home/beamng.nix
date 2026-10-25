@@ -14,7 +14,7 @@
 # app is patched to point here, so hitting Play launches native (Proton is still
 # force-set under Compatibility but i just discard the %command% Steam passes).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 let
   beamngAppId  = "284160"; # official app id
@@ -36,6 +36,8 @@ let
       export SteamGameId=${beamngAppId}
       # read DualSense straight from hidraw. requires steam input to be disabled.
       export SDL_JOYSTICK_HIDAPI=1
+      # FSR 4.1.1 in place of FSR 3 (custom), see the bng-fsr4 flake input
+      export BNG_FSR4=1
 
       bin="$HOME/.local/share/Steam/steamapps/common/BeamNG.drive/BinLinux"
       cd "$bin" || {
@@ -52,7 +54,12 @@ let
   launchCmd = "${beamng-native}/bin/beamng-native %command%";
 in
 {
+  imports = [ inputs.bng-fsr4.homeManagerModules.default ];
+
   home.packages = [ beamng-native ];
+
+  # vulkan layer manifest + menu-label mod; the layer only loads with BNG_FSR4=1
+  programs.bng-fsr4.enable = true;
 
   # point the steam launch options at the native launcher, for every local Steam
   # account. same mechanism as home/eldenring.nix.

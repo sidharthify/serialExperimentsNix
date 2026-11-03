@@ -9,6 +9,7 @@
     ./vscodium.nix
     ./eldenring.nix
     ./beamng.nix
+    ./yakuza0.nix
     ./firefox.nix
     ./kde.nix
   ];

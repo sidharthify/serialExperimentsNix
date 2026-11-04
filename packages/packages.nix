@@ -201,5 +201,6 @@ pkgs: with pkgs; [
   kdePackages.krecorder
   opencode
   # syd
+  rustup
   audacity
 ]

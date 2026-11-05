@@ -61,7 +61,7 @@ pkgs: with pkgs; [
     at-spi2-core
     nss
     fastfetch
-    anydesk
+    #anydesk
     pavucontrol
     file
     erofs-utils
@@ -198,7 +198,11 @@ pkgs: with pkgs; [
   perl
   proton-vpn
   kdePackages.krecorder
-  opencode
+  (opencode.overrideAttrs (old: {
+    node_modules = old.node_modules.overrideAttrs (_: {
+      outputHash = "sha256-prx9dX7kUvs/E3zopkaPk5LXh3xJAy5sZeum/W8L7cA=";
+    });
+  }))
   # syd
   rustup
   audacity

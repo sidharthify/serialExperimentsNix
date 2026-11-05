@@ -20,7 +20,6 @@
   time.hardwareClockInLocalTime = true;
 
   boot.plymouth.enable         = true;
-  boot.initrd.systemd.enable   = true;
 
   # time
   time.timeZone = "Asia/Kolkata";

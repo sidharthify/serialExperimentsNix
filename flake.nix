@@ -27,6 +27,11 @@
       url = "git+file:///home/sidharthify/beamng-fsr4-linux-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    glyphtune = {
+      url = "github:sidharthify/glyphtune";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

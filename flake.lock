@@ -159,6 +159,26 @@
         "type": "github"
       }
     },
+    "glyphtune": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793841050,
+        "narHash": "sha256-9ZIqx4+ndk7237jpIl6xTgc9JhX54iaZbVCKF7mksg4=",
+        "owner": "sidharthify",
+        "repo": "glyphtune",
+        "rev": "33adbf3c5f21419c55344d6d59cebad8d177d32f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sidharthify",
+        "repo": "glyphtune",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -517,6 +537,7 @@
       "inputs": {
         "bng-fsr4": "bng-fsr4",
         "catppuccin": "catppuccin",
+        "glyphtune": "glyphtune",
         "home-manager": "home-manager",
         "lazyvim-nix": "lazyvim-nix",
         "nix-cachyos-kernel": "nix-cachyos-kernel",

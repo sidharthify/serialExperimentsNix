@@ -10,6 +10,7 @@
       inter
       jetbrains-mono
       hack-font
+      nerd-fonts.symbols-only
     ];
 
     fontconfig = {
@@ -33,7 +34,7 @@
       defaultFonts = {
         sansSerif = [ "Inter" "Noto Sans" "Noto Sans CJK SC" "Noto Color Emoji" ];
         serif = [ "Noto Serif" "Noto Serif CJK SC" "Noto Color Emoji" ];
-        monospace = [ "JetBrains Mono" "Noto Sans Mono" "Noto Color Emoji" ];
+        monospace = [ "JetBrains Mono" "Symbols Nerd Font Mono" "Noto Sans Mono" "Noto Color Emoji" ];
         emoji = [ "Noto Color Emoji" ];
       };
 

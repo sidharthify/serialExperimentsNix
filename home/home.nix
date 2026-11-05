@@ -12,6 +12,8 @@
     ./yakuza0.nix
     ./firefox.nix
     ./kde.nix
+    ./nvim.nix
+    ./glyphtune.nix
   ];
 
 }

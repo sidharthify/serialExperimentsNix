@@ -92,7 +92,6 @@ pkgs: with pkgs; [
     git-lfs
     yt-dlp
     apple-cursor
-    neovim
     binwalk
     tinyxxd
     ghidra-bin

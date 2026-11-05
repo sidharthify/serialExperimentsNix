@@ -82,6 +82,7 @@ let
     guess-indent-nvim
     csvview-nvim
     nvim-bqf
+    auto-save-nvim
   ];
 
   mkEntry = p:

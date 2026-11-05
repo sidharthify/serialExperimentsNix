@@ -89,6 +89,8 @@
         userVoiceShow.enable = true;
         reviewDb.enable = true;
         addAttachments.enable = true;
+        gifProviderSwitcher.enable = true;
+        directFileDownload.enable = true;
       };
     };
   };

@@ -88,6 +88,32 @@ return {
   },
 
   {
+    "okuuva/auto-save.nvim",
+    event = { "InsertLeave", "TextChanged" },
+    cmd = "ASToggle",
+    keys = {
+      { "<leader>uv", "<cmd>ASToggle<cr>", desc = "Toggle Auto Save" },
+    },
+    opts = {
+      trigger_events = {
+        immediate_save = { "BufLeave", "FocusLost", "QuitPre", "VimSuspend" },
+        defer_save = { "InsertLeave", "TextChanged" },
+        cancel_deferred_save = { "InsertEnter" },
+      },
+      debounce_delay = 1000,
+      condition = function(buf)
+        if vim.bo[buf].buftype ~= "" then
+          return false
+        end
+        if vim.fn.getbufvar(buf, "&modifiable") ~= 1 then
+          return false
+        end
+        return true
+      end,
+    },
+  },
+
+  {
     "kevinhwang91/nvim-bqf",
     ft = "qf",
     opts = { preview = { border = "rounded", winblend = 0 } },

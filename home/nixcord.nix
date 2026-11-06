@@ -10,9 +10,9 @@
     };
     config = {
       useQuickCss = true;
-      themeLinks = [
-        "https://raw.githubusercontent.com/sidharthify/midnight-discord/refs/heads/master/themes/flavors/midnight-catppuccin-mocha.theme.css"
-      ];
+      #themeLinks = [
+      #"https://raw.githubusercontent.com/sidharthify/midnight-discord/refs/heads/master/themes/flavors/midnight-catppuccin-mocha.theme.css"
+      #];
       plugins = {
         accountPanelServerProfile.enable = true;
         alwaysAnimate.enable = true;

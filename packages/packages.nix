@@ -200,7 +200,7 @@ pkgs: with pkgs; [
   kdePackages.krecorder
   (opencode.overrideAttrs (old: {
     node_modules = old.node_modules.overrideAttrs (_: {
-      outputHash = "sha256-prx9dX7kUvs/E3zopkaPk5LXh3xJAy5sZeum/W8L7cA=";
+      outputHash = "sha256-zaRjXditlZ8C741SeBv8n0ChlfYFrD/l0fKcuo2dxrI=";
     });
   }))
   # syd

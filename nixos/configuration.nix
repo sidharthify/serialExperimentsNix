@@ -19,6 +19,7 @@
     ./system/opengl.nix
     ./system/nix-settings.nix
     ./system/android-dev.nix
+    ./system/mcp-tools.nix
     ./system/gaming.nix
     ./system/overlays.nix
     ./system/flake-packages.nix

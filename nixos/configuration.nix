@@ -44,6 +44,7 @@
 
     ./users/fish.nix
     ./users/sidharthify.nix
+    ./users/veer.nix
   ];
 
   environment.systemPackages = import ../packages/packages.nix pkgs;
